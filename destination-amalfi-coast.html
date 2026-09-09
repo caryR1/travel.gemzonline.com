@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amalfi Coast — Travel Gemz</title>
+<meta name="description" content="A Travel Gemz guide to the Amalfi Coast — lemon groves stacked above cliffs that drop straight into the sea, and towns built into the rock face itself.">
+<link rel="canonical" href="https://travel.gemzonline.com/destination-amalfi-coast.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Amalfi Coast — Travel Gemz">
+<meta property="og:description" content="Lemon groves stacked above cliffs that drop straight into the sea, and towns built into the rock face itself.">
+<meta property="og:url" content="https://travel.gemzonline.com/destination-amalfi-coast.html">
+<meta property="og:site_name" content="Travel Gemz">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink: #0D2B29; --ink-soft: #123B37;
+    --parchment: #F2EAD8; --parchment-deep: #E9DDC1;
+    --emerald: #1F5C4C; --emerald-deep: #144034;
+    --gold: #C79A49; --gold-soft: #E4C888;
+    --cream: #FBF7EC; --text-dark: #16241F; --text-mute: #4B5C55;
+    --serif: 'Fraunces', serif; --sans: 'Inter', sans-serif;
+    --facet-grad: linear-gradient(150deg,#0D2B29,#3B6B58); --hero-photo: url('https://travel.gemzonline.com/wp-content/uploads/2026/09/amalfi-coast-hero.jpg');
+  }
+  *{ box-sizing: border-box; margin:0; padding:0; }
+  html{ scroll-behavior: smooth; }
+  body{ font-family: var(--sans); color: var(--text-dark); background: var(--parchment); line-height: 1.6; overflow-x: hidden; }
+  a{ color: inherit; text-decoration: none; }
+  img{ max-width: 100%; display:block; }
+  .wrap{ max-width: 1100px; margin: 0 auto; padding: 0 32px; }
+
+  header{ position: absolute; top:0; left:0; right:0; z-index: 20; padding: 28px 0; pointer-events: none; }
+  nav.wrap{ display:flex; align-items:center; justify-content: space-between; }
+  .brand{ font-family: var(--serif); font-size: 22px; font-weight: 500; color: var(--cream); pointer-events: auto; }
+  .brand em{ font-style: normal; color: var(--gold-soft); }
+  .navlinks{ display:flex; gap: 36px; font-size: 15px; color: var(--cream); pointer-events: auto; }
+  .navlinks a{ opacity: 0.88; transition: opacity .2s ease; }
+  .navlinks a:hover{ opacity: 1; }
+  .menu-toggle{
+    display:none; background:none; border:none; cursor:pointer; padding:8px;
+    font-size: 24px; line-height:1; color: var(--cream); z-index: 31; position:relative;
+    pointer-events: auto;
+  }
+
+  .dest-hero{
+    position: relative; min-height: 62vh; display:flex; align-items:flex-end;
+    background-image: radial-gradient(ellipse at 78% 12%, rgba(199,154,73,0.22), transparent 55%), linear-gradient(180deg, rgba(13,43,41,0.25) 0%, rgba(13,43,41,0.92) 100%), var(--hero-photo, var(--facet-grad));
+    background-size: cover; background-position: center; background-repeat: no-repeat;
+    color: var(--cream); padding-bottom: 70px;
+  }
+  .dest-hero .wrap{ position: relative; z-index: 2; }
+  .breadcrumb{ font-size: 14px; color: #BFD2CA; margin-bottom: 22px; }
+  .breadcrumb a:hover{ color: var(--gold-soft); }
+  .breadcrumb .sep{ margin: 0 8px; opacity: 0.5; }
+  .dest-hero .kicker{ font-family: var(--serif); font-style: italic; font-size: 15px; color: var(--gold-soft); margin-bottom: 16px; }
+  .dest-hero h1{ font-family: var(--serif); font-weight: 500; font-size: clamp(38px, 6vw, 68px); line-height: 1.05; max-width: 14ch; }
+  .dest-hero p.lede{ margin-top: 22px; max-width: 54ch; font-size: 17.5px; color: #DDE7E1; }
+  .facet-cut{
+    position: absolute; left:0; right:0; bottom: -1px; height: 70px; background: var(--parchment);
+    clip-path: polygon(0 100%, 100% 100%, 100% 45%, 64% 100%, 40% 15%, 0 70%);
+  }
+
+  .stat-strip{ padding: 56px 0 20px; }
+  .stat-strip .wrap{ display:grid; grid-template-columns: repeat(4, 1fr); gap: 30px; border-bottom: 1px solid rgba(31,92,76,0.18); padding-bottom: 40px; }
+  .stat h5{ font-size: 13px; color: var(--text-mute); margin-bottom: 8px; }
+  .stat p{ font-family: var(--serif); font-size: 20px; color: var(--ink); }
+
+  .content-block{ padding: 56px 0; }
+  .content-block .wrap{ display:grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+  .content-block.reverse .wrap{ direction: rtl; }
+  .content-block.reverse .wrap > *{ direction: ltr; }
+  .content-block h2{ font-family: var(--serif); font-weight: 500; font-size: clamp(26px, 3vw, 32px); color: var(--ink); margin-bottom: 16px; }
+  .content-block p{ font-size: 16px; color: var(--text-mute); max-width: 56ch; }
+  .content-block p + p{ margin-top: 14px; }
+  .visual-block{
+    min-height: 320px; border-radius: 3px;
+    background-image: repeating-linear-gradient(115deg, rgba(255,255,255,0.05) 0 2px, transparent 2px 34px), linear-gradient(180deg, rgba(13,43,41,0.05) 0%, rgba(13,43,41,0.35) 100%), var(--photo, var(--facet-grad));
+    background-size: auto, cover, cover; background-position: center, center, center;
+  }
+
+  .list-section{ padding: 20px 0 80px; }
+  .list-section h3{ font-family: var(--serif); font-weight: 500; font-size: 24px; color: var(--emerald-deep); margin-bottom: 28px; border-bottom: 1px solid rgba(31,92,76,0.18); padding-bottom: 16px; }
+  .picks{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+  .pick h4{ font-family: var(--serif); font-weight: 500; font-size: 19px; color: var(--ink); margin-bottom: 8px; }
+  .pick p{ font-size: 14.5px; color: var(--text-mute); }
+
+  .cta-band{ background: var(--ink); color: var(--cream); padding: 80px 0; text-align: center; }
+  .cta-band h2{ font-family: var(--serif); font-weight: 500; font-size: clamp(26px, 3vw, 34px); max-width: 20ch; margin: 0 auto 26px; }
+  .btn-gold{ background: var(--gold); color: #24190A; font-weight: 600; font-size: 15px; padding: 15px 30px; border-radius: 2px; display:inline-block; transition: background .2s ease; }
+  .btn-gold:hover{ background: var(--gold-soft); }
+
+  footer{ background: var(--ink); color: #B9C7C1; padding: 56px 0 40px; }
+  footer .wrap{ display:flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 30px; }
+  footer .brand{ color: var(--cream); margin-bottom: 10px; }
+  footer .tagline{ font-size: 14px; max-width: 34ch; color: #9CADA5; }
+  footer .flinks{ display:flex; flex-wrap: wrap; gap: 12px 28px; font-size: 14.5px; }
+  footer .flinks a:hover{ color: var(--gold-soft); }
+  .fbottom{ margin-top: 46px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.08); font-size: 13px; color: #7C8D86; }
+
+  @media (max-width: 860px){
+    .stat-strip .wrap{ grid-template-columns: 1fr 1fr; }
+    .content-block .wrap, .content-block.reverse .wrap{ grid-template-columns: 1fr; direction: ltr; }
+    .picks{ grid-template-columns: 1fr; }
+    .navlinks{
+      display:none; position:fixed; inset:0; z-index:30;
+      background: var(--ink); flex-direction:column; align-items:center; justify-content:center;
+      gap: 30px; font-size: 20px;
+    }
+    .navlinks.open{ display:flex; }
+    .menu-toggle{ display:block; }
+    .dest-hero { align-items: flex-start; padding-top: 108px; }
+  }
+
+  .back-to-top{
+    position: fixed; bottom: 2em; right: 2em; z-index: 9999;
+    width: 44px; height: 44px; border-radius: 50%;
+    background: var(--ink); color: var(--gold-soft);
+    display:flex; align-items:center; justify-content:center;
+    font-size: 1.3rem; line-height:1; text-decoration:none!important;
+    box-shadow: 0 4px 14px rgba(13,43,41,.25);
+    opacity:0; visibility:hidden; transform: translateY(8px); pointer-events:none;
+    transition: opacity .25s ease, transform .25s ease, visibility .25s;
+  }
+  .back-to-top.is-visible{ opacity:1; visibility:visible; transform:translateY(0); pointer-events:auto; }
+  .back-to-top:hover{ background: var(--emerald-deep); }
+  @media (max-width:600px){
+    .back-to-top{ bottom:1.2em; right:1.2em; width:40px; height:40px; font-size:1.1rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <div class="brand">Travel <em>Gemz</em></div>
+    <button class="menu-toggle" aria-label="Toggle menu" onclick="const o=document.querySelector('.navlinks').classList.toggle('open');this.textContent=o?'\u2715':'\u2630';">☰</button>
+    <div class="navlinks">
+      <a href="index.html#destinations">Destinations</a>
+      <a href="journal.html">Journal</a>
+      <a href="index.html#why">Why us</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<section class="dest-hero">
+  <div class="wrap">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a><span class="sep">/</span><a href="europe.html">Europe</a><span class="sep">/</span>Amalfi Coast
+    </div>
+    <div class="kicker">Italy</div>
+    <h1>Amalfi Coast</h1>
+    <p class="lede">Lemon groves stacked above cliffs that drop straight into the sea, and towns built into the rock face itself.</p>
+  </div>
+  <div class="facet-cut"></div>
+</section>
+
+<section class="stat-strip">
+  <div class="wrap">
+    <div class="stat"><h5>Best time to visit</h5><p>May &ndash; June, Sept</p></div>
+    <div class="stat"><h5>Fly into</h5><p>Naples (NAP)</p></div>
+    <div class="stat"><h5>Good for</h5><p>Scenery, food, couples</p></div>
+    <div class="stat"><h5>Suggested stay</h5><p>4&ndash;6 nights</p></div>
+  </div>
+</section>
+
+<section class="content-block">
+  <div class="wrap">
+    <div>
+      <h2>Base yourself somewhere quieter than Positano</h2>
+      <p>Positano gets the postcards, and the crowds that come with them. Praiano and Atrani sit a few minutes down the coast road, offer the same cliffside views, and cost considerably less — with the added benefit of feeling like an actual town rather than a film set.</p>
+      <p>The coastal road itself is part of the experience and part of the challenge: hire a driver for the transfers and save the rental car for a day trip inland. Ravello, up in the hills, trades the sea view for quiet gardens and some of the best sunset spots on the whole coast.</p>
+    </div>
+    <div class="visual-block" style="--photo:url('https://travel.gemzonline.com/wp-content/uploads/2026/09/amalfi-coast-content1.jpg')"></div>
+  </div>
+</section>
+
+<section class="content-block reverse">
+  <div class="wrap">
+    <div>
+      <h2>What the week actually looks like</h2>
+      <p>Mornings start slow with espresso on a terrace, then a boat out to swim at one of the coves that aren't reachable by road — Fjord di Furore or the grottoes near Conca dei Marini. Afternoons are for wandering: Amalfi town's cathedral steps, or the lemon terraces above Minori.</p>
+      <p>Dinner is the main event most nights. Reserve ahead in high season, and don't skip the smaller towns for it — some of the best meals on this coast happen in Cetara, a fishing village most itineraries skip entirely.</p>
+    </div>
+    <div class="visual-block" style="--photo:url('https://travel.gemzonline.com/wp-content/uploads/2026/09/amalfi-coast-content2.jpg')"></div>
+  </div>
+</section>
+
+<section class="list-section">
+  <div class="wrap">
+    <h3>Worth building your trip around</h3>
+    <div class="picks">
+      <div class="pick">
+        <h4>Path of the Gods</h4>
+        <p>A cliffside hike between Bomerano and Nocelle with views that make the climb worth it.</p>
+      </div>
+      <div class="pick">
+        <h4>Villa Cimbrone, Ravello</h4>
+        <p>Gardens and a terrace looking straight out over the coast — go for golden hour.</p>
+      </div>
+      <div class="pick">
+        <h4>Cetara anchovy pasta</h4>
+        <p>The village's signature dish, made with colatura di alici — worth the detour alone.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap">
+    <h2>More of Europe, waiting to be planned.</h2>
+    <a href="europe.html" class="btn-gold">Back to the region guide</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="brand">Travel <em>Gemz</em></div>
+      <p class="tagline">Fourteen places worth chasing, and the guides to go with them.</p>
+    </div>
+    <div class="flinks">
+      <a href="index.html#destinations">Destinations</a>
+      <a href="journal.html">Journal</a>
+      <a href="index.html#why">Why us</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+  <div class="wrap fbottom">
+    &copy; 2026 Travel Gemz. All rights reserved. &middot; <a href="credits.html" style="color:inherit;">Photo credits</a>
+  </div>
+</footer>
+
+<a href="#" class="back-to-top" id="back-to-top" aria-label="Back to top">&uarr;</a>
+<script>
+(function() {
+  var btn = document.getElementById('back-to-top');
+  if (!btn) return;
+  function toggle() {
+    if (window.scrollY > 600) { btn.classList.add('is-visible'); }
+    else { btn.classList.remove('is-visible'); }
+  }
+  window.addEventListener('scroll', toggle, { passive: true });
+  toggle();
+  btn.addEventListener('click', function(e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+})();
+</script>
+</body>
+</html>

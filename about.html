@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Travel Gemz</title>
+<meta name="description" content="Why Travel Gemz only covers fourteen destinations, not four hundred, and how each guide gets written.">
+<link rel="canonical" href="https://travel.gemzonline.com/about.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="About — Travel Gemz">
+<meta property="og:description" content="Why Travel Gemz only covers fourteen destinations, not four hundred, and how each guide gets written.">
+<meta property="og:url" content="https://travel.gemzonline.com/about.html">
+<meta property="og:site_name" content="Travel Gemz">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink: #0D2B29; --ink-soft: #123B37;
+    --parchment: #F2EAD8; --parchment-deep: #E9DDC1;
+    --emerald: #1F5C4C; --emerald-deep: #144034;
+    --gold: #C79A49; --gold-soft: #E4C888;
+    --cream: #FBF7EC; --text-dark: #16241F; --text-mute: #4B5C55;
+    --serif: 'Fraunces', serif; --sans: 'Inter', sans-serif;
+  }
+  *{ box-sizing: border-box; margin:0; padding:0; }
+  html{ scroll-behavior: smooth; }
+  body{ font-family: var(--sans); color: var(--text-dark); background: var(--parchment); line-height: 1.6; overflow-x: hidden; }
+  a{ color: inherit; text-decoration: none; }
+  img{ max-width: 100%; display:block; }
+  .wrap{ max-width: 1100px; margin: 0 auto; padding: 0 32px; }
+
+  header{ position: absolute; top:0; left:0; right:0; z-index: 20; padding: 28px 0; pointer-events: none; }
+  nav.wrap{ display:flex; align-items:center; justify-content: space-between; }
+  .brand{ font-family: var(--serif); font-size: 22px; font-weight: 500; color: var(--cream); pointer-events: auto; }
+  .brand em{ font-style: normal; color: var(--gold-soft); }
+  .navlinks{ display:flex; gap: 32px; font-size: 15px; color: var(--cream); pointer-events: auto; }
+  .navlinks a{ opacity: 0.88; transition: opacity .2s ease; }
+  .navlinks a:hover{ opacity: 1; }
+  .menu-toggle{
+    display:none; background:none; border:none; cursor:pointer; padding:8px;
+    font-size: 24px; line-height:1; color: var(--cream); z-index: 31; position:relative;
+    pointer-events: auto;
+  }
+
+  .page-hero{
+    position: relative; min-height: 46vh; display:flex; align-items:flex-end;
+    background: radial-gradient(ellipse at 78% 12%, rgba(199,154,73,0.22), transparent 55%),
+      linear-gradient(200deg, #0D2B29 0%, #123B37 45%, #1F5C4C 100%);
+    color: var(--cream); padding-bottom: 64px;
+  }
+  .page-hero .wrap{ position: relative; z-index: 2; }
+  .breadcrumb{ font-size: 14px; color: #BFD2CA; margin-bottom: 22px; }
+  .breadcrumb a:hover{ color: var(--gold-soft); }
+  .breadcrumb .sep{ margin: 0 8px; opacity: 0.5; }
+  .page-hero h1{ font-family: var(--serif); font-weight: 500; font-size: clamp(36px, 5.4vw, 58px); line-height: 1.08; max-width: 16ch; }
+  .page-hero p.lede{ margin-top: 22px; max-width: 52ch; font-size: 17px; color: #DDE7E1; }
+  .facet-cut{
+    position: absolute; left:0; right:0; bottom: -1px; height: 70px; background: var(--parchment);
+    clip-path: polygon(0 100%, 100% 100%, 100% 45%, 64% 100%, 40% 15%, 0 70%);
+  }
+
+  .prose{ padding: 70px 0 40px; }
+  .prose .wrap{ max-width: 720px; }
+  .prose h2{ font-family: var(--serif); font-weight: 500; font-size: clamp(24px, 2.8vw, 30px); color: var(--ink); margin-bottom: 16px; }
+  .prose h2 + p{ margin-top: 0; }
+  .prose p{ font-size: 16.5px; color: var(--text-mute); }
+  .prose p + p{ margin-top: 14px; }
+  .prose section + section{ margin-top: 52px; }
+
+  .why-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-top: 20px; }
+  .why-item h3{ font-family: var(--serif); font-weight: 500; font-size: 19px; color: var(--emerald-deep); margin-bottom: 10px; }
+  .why-item p{ font-size: 15px; color: var(--text-mute); }
+
+  .cta-band{ background: var(--ink); color: var(--cream); padding: 80px 0; text-align: center; margin-top: 80px; }
+  .cta-band h2{ font-family: var(--serif); font-weight: 500; font-size: clamp(26px, 3vw, 34px); max-width: 20ch; margin: 0 auto 26px; }
+  .btn-gold{ background: var(--gold); color: #24190A; font-weight: 600; font-size: 15px; padding: 15px 30px; border-radius: 2px; display:inline-block; transition: background .2s ease; }
+  .btn-gold:hover{ background: var(--gold-soft); }
+
+  footer{ background: var(--ink); color: #B9C7C1; padding: 56px 0 40px; }
+  footer .wrap{ display:flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 30px; }
+  footer .brand{ color: var(--cream); margin-bottom: 10px; }
+  footer .tagline{ font-size: 14px; max-width: 34ch; color: #9CADA5; }
+  footer .flinks{ display:flex; flex-wrap: wrap; gap: 12px 28px; font-size: 14.5px; }
+  footer .flinks a:hover{ color: var(--gold-soft); }
+  .fbottom{ margin-top: 46px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.08); font-size: 13px; color: #7C8D86; }
+
+  @media (max-width: 860px){
+    .why-grid{ grid-template-columns: 1fr; gap: 28px; }
+    .navlinks{
+      display:none; position:fixed; inset:0; z-index:30;
+      background: var(--ink); flex-direction:column; align-items:center; justify-content:center;
+      gap: 30px; font-size: 20px;
+    }
+    .navlinks.open{ display:flex; }
+    .menu-toggle{ display:block; }
+    .page-hero { align-items: flex-start; padding-top: 108px; }
+  }
+
+  .back-to-top{
+    position: fixed; bottom: 2em; right: 2em; z-index: 9999;
+    width: 44px; height: 44px; border-radius: 50%;
+    background: var(--ink); color: var(--gold-soft);
+    display:flex; align-items:center; justify-content:center;
+    font-size: 1.3rem; line-height:1; text-decoration:none!important;
+    box-shadow: 0 4px 14px rgba(13,43,41,.25);
+    opacity:0; visibility:hidden; transform: translateY(8px); pointer-events:none;
+    transition: opacity .25s ease, transform .25s ease, visibility .25s;
+  }
+  .back-to-top.is-visible{ opacity:1; visibility:visible; transform:translateY(0); pointer-events:auto; }
+  .back-to-top:hover{ background: var(--emerald-deep); }
+  @media (max-width:600px){
+    .back-to-top{ bottom:1.2em; right:1.2em; width:40px; height:40px; font-size:1.1rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <div class="brand">Travel <em>Gemz</em></div>
+    <button class="menu-toggle" aria-label="Toggle menu" onclick="const o=document.querySelector('.navlinks').classList.toggle('open');this.textContent=o?'\u2715':'\u2630';">☰</button>
+    <div class="navlinks">
+      <a href="index.html#destinations">Destinations</a>
+      <a href="journal.html">Journal</a>
+      <a href="index.html#why">Why us</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a><span class="sep">/</span>About
+    </div>
+    <h1>Fourteen places, chosen carefully.</h1>
+    <p class="lede">Travel Gemz exists because most travel sites cover too much ground to say anything useful about any of it.</p>
+  </div>
+  <div class="facet-cut"></div>
+</section>
+
+<section class="prose">
+  <div class="wrap">
+
+    <section>
+      <h2>Why fourteen, not four hundred</h2>
+      <p>A gem isn't valuable because it's the biggest stone in the case — it's the one cut and set with care. We hold every destination on this site to that standard. Each place here was picked for a specific reason: a coastline, a dish, a season, a feeling you can't quite get anywhere else.</p>
+      <p>That means saying no to a lot of places that would be perfectly nice to write about. We'd rather add the fifteenth destination only once we can do it justice than pad the list to look more comprehensive than we are.</p>
+    </section>
+
+    <section>
+      <h2>How a guide gets written</h2>
+      <p>Every destination page starts from time actually spent on the ground — where to eat, what to skip, which viewpoint is worth the early alarm. We update guides as things change, and we'd rather leave a place off the site than publish a guide we haven't kept current.</p>
+    </section>
+
+    <section>
+      <h2>What we're building toward</h2>
+      <div class="why-grid">
+        <div class="why-item">
+          <h3>More regions, slowly</h3>
+          <p>Each new destination goes through the same bar the first fourteen did — no filler additions just to grow the count.</p>
+        </div>
+        <div class="why-item">
+          <h3>Deeper guides, not just more of them</h3>
+          <p>Itineraries, neighborhood breakdowns, and seasonal notes are getting added to existing destinations over time.</p>
+        </div>
+        <div class="why-item">
+          <h3>One place for the whole trip</h3>
+          <p>Inspiration, itineraries, and things-to-do guides living together, so you're not planning across ten open tabs.</p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap">
+    <h2>Ready to start planning?</h2>
+    <a href="index.html#destinations" class="btn-gold">See the destinations</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="brand">Travel <em>Gemz</em></div>
+      <p class="tagline">Fourteen places worth chasing, and the guides to go with them.</p>
+    </div>
+    <div class="flinks">
+      <a href="index.html#destinations">Destinations</a>
+      <a href="journal.html">Journal</a>
+      <a href="index.html#why">Why us</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+  <div class="wrap fbottom">
+    &copy; 2026 Travel Gemz. All rights reserved. &middot; <a href="credits.html" style="color:inherit;">Photo credits</a>
+  </div>
+</footer>
+
+<a href="#" class="back-to-top" id="back-to-top" aria-label="Back to top">&uarr;</a>
+<script>
+(function() {
+  var btn = document.getElementById('back-to-top');
+  if (!btn) return;
+  function toggle() {
+    if (window.scrollY > 600) { btn.classList.add('is-visible'); }
+    else { btn.classList.remove('is-visible'); }
+  }
+  window.addEventListener('scroll', toggle, { passive: true });
+  toggle();
+  btn.addEventListener('click', function(e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Caribbean &amp; Latin America — Travel Gemz</title>
+<meta name="description" content="Travel Gemz guides to the Caribbean and Latin America — warm water and slower clocks, from Jamaica's cliffs to Tulum's cenotes.">
+<link rel="canonical" href="https://travel.gemzonline.com/caribbean-latin-america.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Caribbean & Latin America — Travel Gemz">
+<meta property="og:description" content="Warm water and slower clocks, from Jamaica's cliffs to Tulum's cenotes.">
+<meta property="og:url" content="https://travel.gemzonline.com/caribbean-latin-america.html">
+<meta property="og:site_name" content="Travel Gemz">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink: #0D2B29; --ink-soft: #123B37;
+    --parchment: #F2EAD8; --parchment-deep: #E9DDC1;
+    --emerald: #1F5C4C; --emerald-deep: #144034;
+    --gold: #C79A49; --gold-soft: #E4C888;
+    --cream: #FBF7EC; --text-dark: #16241F; --text-mute: #4B5C55;
+    --serif: 'Fraunces', serif; --sans: 'Inter', sans-serif;
+  }
+  *{ box-sizing: border-box; margin:0; padding:0; }
+  html{ scroll-behavior: smooth; }
+  body{ font-family: var(--sans); color: var(--text-dark); background: var(--parchment); line-height: 1.55; overflow-x: hidden; }
+  a{ color: inherit; text-decoration: none; }
+  img{ max-width: 100%; display:block; }
+  .wrap{ max-width: 1180px; margin: 0 auto; padding: 0 32px; }
+
+  header{ position: absolute; top:0; left:0; right:0; z-index: 20; padding: 28px 0; pointer-events: none; }
+  nav.wrap{ display:flex; align-items:center; justify-content: space-between; }
+  .brand{ font-family: var(--serif); font-size: 22px; font-weight: 500; color: var(--cream); pointer-events: auto; }
+  .brand em{ font-style: normal; color: var(--gold-soft); }
+  .navlinks{ display:flex; gap: 36px; font-size: 15px; color: var(--cream); pointer-events: auto; }
+  .navlinks a{ opacity: 0.88; transition: opacity .2s ease; }
+  .navlinks a:hover{ opacity: 1; }
+  .menu-toggle{
+    display:none; background:none; border:none; cursor:pointer; padding:8px;
+    font-size: 24px; line-height:1; color: var(--cream); z-index: 31; position:relative;
+    pointer-events: auto;
+  }
+
+  .hub-hero{
+    position: relative; min-height: 56vh; display:flex; align-items:flex-end;
+    background: radial-gradient(ellipse at 80% 10%, rgba(199,154,73,0.2), transparent 55%),
+      linear-gradient(200deg, #0D2B29 0%, #123B37 45%, #1F5C4C 100%);
+    color: var(--cream); padding-bottom: 64px;
+  }
+  .hub-hero .wrap{ position: relative; z-index: 2; }
+  .breadcrumb{ font-size: 14px; color: #BFD2CA; margin-bottom: 22px; }
+  .breadcrumb a:hover{ color: var(--gold-soft); }
+  .breadcrumb .sep{ margin: 0 8px; opacity: 0.5; }
+  .region-label{ font-family: var(--serif); font-style: italic; font-size: 15px; color: var(--gold-soft); margin-bottom: 16px; }
+  .hub-hero h1{ font-family: var(--serif); font-weight: 500; font-size: clamp(36px, 5.4vw, 62px); line-height: 1.08; max-width: 16ch; }
+  .hub-hero p.lede{ margin-top: 22px; max-width: 52ch; font-size: 17px; color: #DDE7E1; }
+  .facet-cut{
+    position: absolute; left:0; right:0; bottom: -1px; height: 70px; background: var(--parchment);
+    clip-path: polygon(0 100%, 100% 100%, 100% 45%, 64% 100%, 40% 15%, 0 70%);
+  }
+
+  .hub-intro{ padding: 64px 0 20px; }
+  .hub-intro .wrap{ display:grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+  .hub-intro h2{ font-family: var(--serif); font-weight: 500; font-size: clamp(24px, 2.8vw, 30px); color: var(--ink); line-height: 1.2; }
+  .hub-intro p{ font-size: 16px; color: var(--text-mute); max-width: 58ch; }
+
+  .directory{ padding: 60px 0 110px; }
+  .directory-head{ display:flex; justify-content: space-between; align-items: baseline; margin-bottom: 34px; border-bottom: 1px solid rgba(31,92,76,0.18); padding-bottom: 18px; }
+  .directory-head h3{ font-family: var(--serif); font-weight: 500; font-size: 24px; color: var(--emerald-deep); }
+  .directory-head span{ font-size: 14px; color: var(--text-mute); }
+
+  .dir-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
+  .dir-card{
+    position: relative; border-radius: 3px; overflow: hidden; min-height: 300px;
+    display:flex; flex-direction: column; justify-content: flex-end; padding: 26px;
+    color: var(--cream); isolation: isolate; transition: transform .25s ease;
+  }
+  .dir-card:hover{ transform: translateY(-4px); }
+  .dir-card::before{
+    content:""; position:absolute; inset:0;
+    background-image: repeating-linear-gradient(115deg, rgba(255,255,255,0.05) 0 2px, transparent 2px 34px), linear-gradient(180deg, rgba(13,43,41,0.05) 0%, rgba(13,43,41,0.8) 100%), var(--photo, var(--facet-grad));
+    background-size: auto, cover, cover; background-position: center, center, center;
+    z-index: -1;
+  }
+  .dir-card .country{ font-size: 13px; opacity: 0.8; margin-bottom: 6px; }
+  .dir-card h4{ font-family: var(--serif); font-weight: 500; font-size: 25px; line-height: 1.15; }
+  .dir-card p{ font-size: 14.5px; margin-top: 8px; max-width: 30ch; color: #EFE9D8; opacity: 0.92; }
+  .dir-card .explore{ margin-top: 16px; font-size: 13.5px; color: var(--gold-soft); }
+
+  .dir-card.placeholder{
+    background: none; border: 1.5px dashed rgba(31,92,76,0.35);
+    justify-content: center; align-items: center; text-align: center; color: var(--text-mute);
+  }
+  .dir-card.placeholder::before{ display:none; }
+  .dir-card.placeholder .plus{ font-family: var(--serif); font-size: 34px; color: var(--emerald); margin-bottom: 8px; }
+  .dir-card.placeholder h4{ font-family: var(--sans); font-weight: 500; font-size: 15px; color: var(--text-mute); }
+
+  .g1{ --facet-grad: linear-gradient(150deg,#0D2B29,#1F5C4C); }
+  .g2{ --facet-grad: linear-gradient(150deg,#123B37,#2E7A63); }
+  .g3{ --facet-grad: linear-gradient(150deg,#3B2A12,#8A6423); }
+
+  footer{ background: var(--ink); color: #B9C7C1; padding: 56px 0 40px; }
+  footer .wrap{ display:flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 30px; }
+  footer .brand{ color: var(--cream); margin-bottom: 10px; }
+  footer .tagline{ font-size: 14px; max-width: 34ch; color: #9CADA5; }
+  footer .flinks{ display:flex; flex-wrap: wrap; gap: 12px 28px; font-size: 14.5px; }
+  footer .flinks a:hover{ color: var(--gold-soft); }
+  .fbottom{ margin-top: 46px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.08); font-size: 13px; color: #7C8D86; }
+
+  @media (max-width: 860px){
+    .hub-intro .wrap{ grid-template-columns: 1fr; gap: 24px; }
+    .dir-grid{ grid-template-columns: 1fr 1fr; }
+    .navlinks{
+      display:none; position:fixed; inset:0; z-index:30;
+      background: var(--ink); flex-direction:column; align-items:center; justify-content:center;
+      gap: 30px; font-size: 20px;
+    }
+    .navlinks.open{ display:flex; }
+    .menu-toggle{ display:block; }
+    .hub-hero { align-items: flex-start; padding-top: 108px; }
+  }
+  @media (max-width: 560px){ .dir-grid{ grid-template-columns: 1fr; } }
+
+  .back-to-top{
+    position: fixed; bottom: 2em; right: 2em; z-index: 9999;
+    width: 44px; height: 44px; border-radius: 50%;
+    background: var(--ink); color: var(--gold-soft);
+    display:flex; align-items:center; justify-content:center;
+    font-size: 1.3rem; line-height:1; text-decoration:none!important;
+    box-shadow: 0 4px 14px rgba(13,43,41,.25);
+    opacity:0; visibility:hidden; transform: translateY(8px); pointer-events:none;
+    transition: opacity .25s ease, transform .25s ease, visibility .25s;
+  }
+  .back-to-top.is-visible{ opacity:1; visibility:visible; transform:translateY(0); pointer-events:auto; }
+  .back-to-top:hover{ background: var(--emerald-deep); }
+  @media (max-width:600px){
+    .back-to-top{ bottom:1.2em; right:1.2em; width:40px; height:40px; font-size:1.1rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <div class="brand">Travel <em>Gemz</em></div>
+    <button class="menu-toggle" aria-label="Toggle menu" onclick="const o=document.querySelector('.navlinks').classList.toggle('open');this.textContent=o?'\u2715':'\u2630';">☰</button>
+    <div class="navlinks">
+      <a href="index.html#destinations">Destinations</a>
+      <a href="journal.html">Journal</a>
+      <a href="index.html#why">Why us</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hub-hero">
+  <div class="wrap">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a><span class="sep">/</span><a href="index.html#destinations">Destinations</a><span class="sep">/</span>Caribbean &amp; Latin America
+    </div>
+    <div class="region-label">Region guide</div>
+    <h1>Caribbean &amp; Latin America</h1>
+    <p class="lede">Warm water and slower clocks — from Jamaica's cliffs to Tulum's cenotes, with more of the region opening up as we go.</p>
+  </div>
+  <div class="facet-cut"></div>
+</section>
+
+<section class="hub-intro">
+  <div class="wrap">
+    <h2>Three places to start, more on the way.</h2>
+    <p>This region is just getting going — Jamaica, Turks and Caicos, and Tulum are live now, with Colombia and Peru already on our list to add next. Each destination page below has its own guide to where to stay, what to eat, and what's actually worth your time on the ground.</p>
+  </div>
+</section>
+
+<section class="directory">
+  <div class="wrap">
+    <div class="directory-head">
+      <h3>Destinations in this region</h3>
+      <span>3 live &middot; 2 coming soon</span>
+    </div>
+    <div class="dir-grid">
+
+      <a href="destination-jamaica.html" class="dir-card g1" style="--photo:url('https://travel.gemzonline.com/wp-content/uploads/2026/09/jamaica-hero.jpg')">
+        <div class="country">Jamaica</div>
+        <h4>Jamaica</h4>
+        <p>Cliffside sunsets in Negril and jerk smoke drifting over Ocho Rios.</p>
+        <div class="explore">Explore Jamaica &rarr;</div>
+      </a>
+
+      <a href="destination-turks-caicos.html" class="dir-card g2" style="--photo:url('https://travel.gemzonline.com/wp-content/uploads/2026/09/turks-caicos-hero.jpg')">
+        <div class="country">British Overseas Territory</div>
+        <h4>Turks &amp; Caicos</h4>
+        <p>The quietest, bluest sand in the Caribbean.</p>
+        <div class="explore">Explore Turks &amp; Caicos &rarr;</div>
+      </a>
+
+      <a href="destination-tulum.html" class="dir-card g3" style="--photo:url('https://travel.gemzonline.com/wp-content/uploads/2026/09/tulum-hero.jpg')">
+        <div class="country">Mexico</div>
+        <h4>Tulum</h4>
+        <p>Jungle ruins, cenotes, and a coastline that stays boutique.</p>
+        <div class="explore">Explore Tulum &rarr;</div>
+      </a>
+
+      <div class="dir-card placeholder">
+        <div class="plus">+</div>
+        <h4>Colombia — coming soon</h4>
+      </div>
+
+      <div class="dir-card placeholder">
+        <div class="plus">+</div>
+        <h4>Peru — coming soon</h4>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="brand">Travel <em>Gemz</em></div>
+      <p class="tagline">Fourteen places worth chasing, and the guides to go with them.</p>
+    </div>
+    <div class="flinks">
+      <a href="index.html#destinations">Destinations</a>
+      <a href="journal.html">Journal</a>
+      <a href="index.html#why">Why us</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+  <div class="wrap fbottom">
+    &copy; 2026 Travel Gemz. All rights reserved. &middot; <a href="credits.html" style="color:inherit;">Photo credits</a>
+  </div>
+</footer>
+
+<a href="#" class="back-to-top" id="back-to-top" aria-label="Back to top">&uarr;</a>
+<script>
+(function() {
+  var btn = document.getElementById('back-to-top');
+  if (!btn) return;
+  function toggle() {
+    if (window.scrollY > 600) { btn.classList.add('is-visible'); }
+    else { btn.classList.remove('is-visible'); }
+  }
+  window.addEventListener('scroll', toggle, { passive: true });
+  toggle();
+  btn.addEventListener('click', function(e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Photo Credits — Travel Gemz</title>
+<meta name="description" content="Photo credits and licensing for every image used across Travel Gemz, sourced from Wikimedia Commons.">
+<link rel="canonical" href="https://travel.gemzonline.com/credits.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Photo Credits — Travel Gemz">
+<meta property="og:description" content="Photo credits and licensing for every image used across Travel Gemz.">
+<meta property="og:url" content="https://travel.gemzonline.com/credits.html">
+<meta property="og:site_name" content="Travel Gemz">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink: #0D2B29; --ink-soft: #123B37;
+    --parchment: #F2EAD8; --parchment-deep: #E9DDC1;
+    --emerald: #1F5C4C; --emerald-deep: #144034;
+    --gold: #C79A49; --gold-soft: #E4C888;
+    --cream: #FBF7EC; --text-dark: #16241F; --text-mute: #4B5C55;
+    --serif: 'Fraunces', serif; --sans: 'Inter', sans-serif;
+  }
+  *{ box-sizing: border-box; margin:0; padding:0; }
+  html{ scroll-behavior: smooth; }
+  body{ font-family: var(--sans); color: var(--text-dark); background: var(--parchment); line-height: 1.6; overflow-x: hidden; }
+  a{ color: inherit; text-decoration: underline; text-decoration-color: rgba(31,92,76,0.35); }
+  a:hover{ text-decoration-color: var(--emerald); }
+  img{ max-width: 100%; display:block; }
+  .wrap{ max-width: 1100px; margin: 0 auto; padding: 0 32px; }
+
+  header{ position: absolute; top:0; left:0; right:0; z-index: 20; padding: 28px 0; pointer-events: none; }
+  nav.wrap{ display:flex; align-items:center; justify-content: space-between; }
+  .brand{ font-family: var(--serif); font-size: 22px; font-weight: 500; color: var(--cream); pointer-events: auto; }
+  .brand em{ font-style: normal; color: var(--gold-soft); }
+  .navlinks{ display:flex; gap: 32px; font-size: 15px; color: var(--cream); pointer-events: auto; }
+  .navlinks a{ opacity: 0.88; transition: opacity .2s ease; text-decoration: none; }
+  .navlinks a:hover{ opacity: 1; }
+  .menu-toggle{
+    display:none; background:none; border:none; cursor:pointer; padding:8px;
+    font-size: 24px; line-height:1; color: var(--cream); z-index: 31; position:relative;
+    pointer-events: auto;
+  }
+
+  .page-hero{
+    position: relative; min-height: 38vh; display:flex; align-items:flex-end;
+    background: radial-gradient(ellipse at 78% 12%, rgba(199,154,73,0.22), transparent 55%),
+      linear-gradient(200deg, #0D2B29 0%, #123B37 45%, #1F5C4C 100%);
+    color: var(--cream); padding-bottom: 60px;
+  }
+  .page-hero .wrap{ position: relative; z-index: 2; }
+  .breadcrumb{ font-size: 14px; color: #BFD2CA; margin-bottom: 22px; }
+  .breadcrumb a{ text-decoration: none; }
+  .breadcrumb a:hover{ color: var(--gold-soft); }
+  .breadcrumb .sep{ margin: 0 8px; opacity: 0.5; }
+  .page-hero h1{ font-family: var(--serif); font-weight: 500; font-size: clamp(32px, 4.6vw, 48px); line-height: 1.1; max-width: 18ch; }
+  .page-hero p.lede{ margin-top: 18px; max-width: 56ch; font-size: 16px; color: #DDE7E1; }
+  .facet-cut{
+    position: absolute; left:0; right:0; bottom: -1px; height: 60px; background: var(--parchment);
+    clip-path: polygon(0 100%, 100% 100%, 100% 45%, 64% 100%, 40% 15%, 0 70%);
+  }
+
+  .credits{ padding: 60px 0 100px; }
+  .credits .wrap{ max-width: 800px; }
+  .credits > .wrap > p{ font-size: 15.5px; color: var(--text-mute); margin-bottom: 44px; max-width: 62ch; }
+  .credits section{ margin-bottom: 36px; }
+  .credits h3{ font-family: var(--serif); font-weight: 500; font-size: 19px; color: var(--emerald-deep); margin-bottom: 14px; border-bottom: 1px solid rgba(31,92,76,0.18); padding-bottom: 10px; }
+  .credit-list{ display:flex; flex-direction:column; gap: 10px; }
+  .credit-row{ display:flex; gap: 14px; font-size: 14px; }
+  .credit-label{ flex: 0 0 130px; color: var(--text-mute); font-size: 12.5px; text-transform: uppercase; letter-spacing: 0.03em; padding-top: 2px; }
+  .credit-detail{ color: var(--text-dark); flex: 1; }
+
+  footer{ background: var(--ink); color: #B9C7C1; padding: 56px 0 40px; }
+  footer .wrap{ display:flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 30px; }
+  footer .brand{ color: var(--cream); margin-bottom: 10px; }
+  footer .tagline{ font-size: 14px; max-width: 34ch; color: #9CADA5; }
+  footer .flinks{ display:flex; flex-wrap: wrap; gap: 12px 28px; font-size: 14.5px; }
+  footer .flinks a{ text-decoration: none; }
+  footer .flinks a:hover{ color: var(--gold-soft); }
+  .fbottom{ margin-top: 46px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.08); font-size: 13px; color: #7C8D86; }
+
+  @media (max-width: 860px){
+    .credit-row{ flex-direction: column; gap: 4px; }
+    .credit-label{ flex: none; }
+    .navlinks{
+      display:none; position:fixed; inset:0; z-index:30;
+      background: var(--ink); flex-direction:column; align-items:center; justify-content:center;
+      gap: 30px; font-size: 20px;
+    }
+    .navlinks.open{ display:flex; }
+    .menu-toggle{ display:block; }
+    .page-hero { align-items: flex-start; padding-top: 108px; }
+  }
+
+  .back-to-top{
+    position: fixed; bottom: 2em; right: 2em; z-index: 9999;
+    width: 44px; height: 44px; border-radius: 50%;
+    background: var(--ink); color: var(--gold-soft);
+    display:flex; align-items:center; justify-content:center;
+    font-size: 1.3rem; line-height:1; text-decoration:none!important;
+    box-shadow: 0 4px 14px rgba(13,43,41,.25);
+    opacity:0; visibility:hidden; transform: translateY(8px); pointer-events:none;
+    transition: opacity .25s ease, transform .25s ease, visibility .25s;
+  }
+  .back-to-top.is-visible{ opacity:1; visibility:visible; transform:translateY(0); pointer-events:auto; }
+  .back-to-top:hover{ background: var(--emerald-deep); }
+  @media (max-width:600px){
+    .back-to-top{ bottom:1.2em; right:1.2em; width:40px; height:40px; font-size:1.1rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <div class="brand">Travel <em>Gemz</em></div>
+    <button class="menu-toggle" aria-label="Toggle menu" onclick="const o=document.querySelector('.navlinks').classList.toggle('open');this.textContent=o?'✕':'☰';">☰</button>
+    <div class="navlinks">
+      <a href="index.html#destinations">Destinations</a>
+      <a href="journal.html">Journal</a>
+      <a href="index.html#why">Why us</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a><span class="sep">/</span>Photo Credits
+    </div>
+    <h1>Photo credits.</h1>
+    <p class="lede">Every photograph on Travel Gemz comes from Wikimedia Commons under a Creative Commons or public domain license. Photographers credited below, grouped by destination.</p>
+  </div>
+  <div class="facet-cut"></div>
+</section>
+
+<section class="credits">
+  <div class="wrap">
+    <p>We don't own or claim these images — they're used under the license listed with each one. If you're a photographer credited here and would like an image removed or a credit corrected, <a href="contact.html">get in touch</a>.</p>
+
+    <section>
+      <h3>Jamaica</h3>
+      <div class="credit-list">
+        <div class="credit-row">
+          <span class="credit-label">Hero photo</span>
+          <span class="credit-detail">&ldquo;Negril sunset&rdquo; by Mwinog2777, <a href="https://commons.wikimedia.org/wiki/File:Negril_sunset.jpg" target="_blank" rel="noopener">Wikimedia Commons</a> (CC BY-SA 4.0)</span>
+        </div>
+        <div class="credit-row">
+          <span class="credit-label">Content photo 1</span>
+          <span class="credit-detail">&ldquo;Jamaica Ocho Rios Dunn's River Falls (beach)&rdquo; by Dr. Thomas Liptak, <a href="https://commons.wikimedia.org/wiki/File:Jamaica_Ocho_Rios_Dunn%27s_River_Falls_(beach).jpg" target="_blank" rel="noopener">Wikimedia Commons</a> (CC BY-SA 4.0)</span>
+        </div>
+        <div class="credit-row">
+          <span class="credit-label">Content photo 2</span>
+          <span class="credit-detail">&ldquo;Jamaica Ocho Rios Dunn's River Falls 1&rdquo; by Dr. Thomas Liptak, <a href="https://commons.wikimedia.org/wiki/File:Jamaica_Ocho_Rios_Dunn%27s_River_Falls_1.jpg" target="_blank" rel="noopener">Wikimedia Commons</a> (CC BY-SA 4.0)</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h3>Turks &amp; Caicos</h3>
+      <div class="credit-list">
+        <div class="credit-row">
+          <span class="credit-label">Hero photo</span>
+          <span class="credit-detail">&ldquo;Sunset in Grace Bay, Turks and Caicos Islands&rdquo; by Jason Boldero, <a href="https://commons.wikimedia.org/wiki/File:Sunset_in_Grace_Bay,_Turks_and_Caicos_Islands.jpg" target="_blank" rel="noopener">Wikimedia Commons</a> (CC BY 2.0)</span>
+        </div>
+        <div class="credit-row">
+          <span class="credit-label">Content photo 1</span>
+          <span class="credit-detail">&ldquo;Chalk Sound&rdquo; by Tim Sackton, <a href="https://commons.wikimedia.org/wiki/File:Chalk_Sound.jpg" target="_blank" rel="noopener">Wikimedia Commons</a> (CC BY-SA 2.0)</span>
+        </div>
+        <div class="credit-row">
+          <span class="credit-label">Content photo 2</span>
+          <span class="credit-detail">&ldquo;Elkhorn Coral with a Yellowtail Damselfish in the Caribbean Sea in Curaçao&rdquo; by Matthew T Rader, <a href="https://commons.wikimedia.org/wiki/File:Elkhorn_Coral_with_a_Yellowtail_Damselfish_in_the_Caribbean_Sea_in_Cura%C3%A7ao.jpg" target="_blank" rel="noopener">Wikimedia Commons</a> (CC BY-SA 4.0)</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h3>Tulum</h3>
+      <div class="credit-list">
+        <div class="credit-row">
+          <span class="credit-label">Hero photo</span>
+          <span class="credit-detail">&ldquo;Tulum Archaeological Site - Quintana Roo - Mexico - 02&rdquo; by Adam Jones, <a href="https://commons.wikimedia.org/wiki/File:Tulum_Archaeological_Site_-_Quintana_Roo_-_Mexico_-_02.jpg" target="_blank" rel="noopener">Wikimedia Commons</a> (CC BY-SA 2.0)</span>
+        </div>
+        <div class="credit-row">
+          <span class="credit-label">Content photo 1</span>
+          <span class="credit-detail">&ldquo;Tulum - God of the Winds Temple 03&rdquo; by Martin Falbisoner, <a href="https://commons.wikimedia.org/wiki/File:Tulum_-_God_of_the_Winds_Temple_03.JPG" target="_blank" rel="noopener">Wikimedia Commons</a> (CC BY-SA 4.0)</span>
+        </div>
+        <div class="credit-row">
+          <span class="credit-label">Content photo 2</span>
+          <span class="credit-detail">&ldquo;Cenote Corazon Paraiso, Tulum QR 2023&rdquo; by Erik Cleves Kristensen, <a href="https://commons.wikimedia.org/wiki/File:Cenote_Corazon_Paraiso,_Tulum_QR_2023.jpg" target="_blank" rel="noopener">Wikimedia Commons</a> (CC BY 2.0)</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h3>Amalfi Coast</h3>
+      <div class="credit-list">
+        <div class="credit-row">
+          <span class="credit-label">Hero photo</span>
+          <span class="credit-detail">&ldquo;AmalfiCoastFromAirplane&rdquo; by Hengist Decius, <a href="https://commons.wikimedia.org/wiki/File:AmalfiCoastFromAirplane.jpg" target="_blank" rel="noopener">Wikimedia Commons</a> (CC BY 2.0)</span>
+        </div>
+        <div class="credit-row">
+          <span class="credit-label">Content photo 1</span>
+          <span class="credit-detail">&ldquo;Positano (Italy) 04&rdquo; by Bernard Gagnon, <a href="https://commons.wikimedia.org/wiki/File:Positano_(Italy)_04.jpg" target="_blank" rel="noopener">Wikimedia Commons</a> (CC BY 4.0)</span>
+        </div>
+        <div class="credit-row">
+          <span class="credit-label">Content photo 2</span>
+          <span class="credit-detail">&ldquo;Ravello-coastline&rdquo; by Matt c j486 at English Wikipedia, <a href="https://commons.wikimedia.org/wiki/File:Ravello-coastline.jpg" target="_blank" rel="noopener">Wikimedia Commons</a> (CC BY-SA 3.0)</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h3>Santorini</h3>
+      <div class="credit-list">
+        <div class="credit-row">
+          <span class="credit-label">Hero photo</span>
+          <span class="credit-detail">&ldquo;Oia - Santorini 2019&rdquo; by User:Anna.Tsolidou, <a href="https://commons.wikimedia.org/wiki/File:Oia_-_Santorini_2019.jpg" target="_blank" rel="noopener">Wikimedia Commons</a> (CC BY-SA 4.0)</span>
+        </div>
+        <div class="credit-row">
+          <span class="credit-label">Content photo 1</span>
+          <span class="credit-detail">&ldquo;Caldera of Santorini - Nea Kameni - seen from Fira Thira&rdquo; by Norbert Nagel, <a href="https://commons.wikimedia.org/wiki/File:Caldera_of_Santorini_-_Nea_Kameni_-_seen_from_Fira_Thira.jpg" target="_blank" rel="noopener">Wikimedia Commons</a> (CC BY-SA 3.0)</span>
+        </div>
+        <div class="credit-row">
+          <span class="credit-label">Content photo 2</span>
+          <span class="credit-detail">&ldquo;Rowing boat on a house roof - Fira - Santorini - Greece - 02&rdquo; by Norbert Nagel, <a href="https://commons.wikimedia.org/wiki/File:Rowing_boat_on_a_house_roof_-_Fira_-_Santorini_-_Greece_-_02.jpg" target="_blank" rel="noopener">Wikimedia Commons</a> (CC BY-SA 3.0)</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h3>Palawan</h3>
+      <div class="credit-list">
+        <div class="credit-row">
+          <span class="credit-label">Hero photo</span>
+          <span class="credit-detail">&ldquo;Limestone island in Bacuit Bay, El Nido, Palawan, Philippines&rdquo; by Vyacheslav Argenberg, <a href="https://commons.wikimedia.org/wiki/File:Limestone_island_in_Bacuit_Bay,_El_Nido,_Palawan,_Philippines.jpg" target="_blank" rel="noopener">Wikimedia Commons</a> (CC BY 4.0)</span>
+        </div>
+        <div class="credit-row">
+          <span class="credit-label">Content photo 1</span>
+          <span class="credit-detail">&ldquo;Big Lagoon at El Nido, Palawan, Philippines&rdquo; by Marciano Villavito, <a href="https://commons.wikimedia.org/wiki/File:Big_Lagoon_at_El_Nido,_Palawan,_Philippines.jpg" target="_blank" rel="noopener">Wikimedia Commons</a> (CC BY-SA 4.0)</span>
+        </div>
+        <div class="credit-row">
+          <span class="credit-label">Content photo 2</span>
+          <span class="credit-detail">&ldquo;Puerto Princesa Subterranean Park, limestone formations, Palawan, Philippines&rdquo; by Vyacheslav Argenberg, <a href="https://commons.wikimedia.org/wiki/File:Puerto_Princesa_Subterranean_Park,_limestone_formations,_Palawan,_Philippines.jpg" target="_blank" rel="noopener">Wikimedia Commons</a> (CC BY 4.0)</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h3>Bali</h3>
+      <div class="credit-list">
+        <div class="credit-row">
+          <span class="credit-label">Hero photo</span>
+          <span class="credit-detail">&ldquo;Cliffs of Uluwatu, Bali, Indonesia, 20220826 1006 1038&rdquo; by Jakub Hałun, <a href="https://commons.wikimedia.org/wiki/File:Cliffs_of_Uluwatu,_Bali,_Indonesia,_20220826_1006_1038.jpg" target="_blank" rel="noopener">Wikimedia Commons</a> (CC BY-SA 4.0)</span>
+        </div>
+        <div class="credit-row">
+          <span class="credit-label">Content photo 1</span>
+          <span class="credit-detail">&ldquo;Rice terraces, Bali&rdquo; by Vyacheslav Argenberg, <a href="https://commons.wikimedia.org/wiki/File:Rice_terraces,_Bali.jpg" target="_blank" rel="noopener">Wikimedia Commons</a> (CC BY 4.0)</span>
+        </div>
+        <div class="credit-row">
+          <span class="credit-label">Content photo 2</span>
+          <span class="credit-detail">&ldquo;Rice fields, Bedulu near Ubud, Bali, Indonesia, 20220824 1039 0665&rdquo; by Jakub Hałun, <a href="https://commons.wikimedia.org/wiki/File:Rice_fields,_Bedulu_near_Ubud,_Bali,_Indonesia,_20220824_1039_0665.jpg" target="_blank" rel="noopener">Wikimedia Commons</a> (CC BY-SA 4.0)</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h3>Bora Bora</h3>
+      <div class="credit-list">
+        <div class="credit-row">
+          <span class="credit-label">Hero photo</span>
+          <span class="credit-detail">&ldquo;Boraboraluft gerade&rdquo; by Makemake at de.wikipedia, <a href="https://commons.wikimedia.org/wiki/File:Boraboraluft_gerade.jpg" target="_blank" rel="noopener">Wikimedia Commons</a> (CC BY-SA 3.0)</span>
+        </div>
+        <div class="credit-row">
+          <span class="credit-label">Content photo 1</span>
+          <span class="credit-detail">&ldquo;Bora Bora (16542797633)&rdquo; by The TerraMar Project, <a href="https://commons.wikimedia.org/wiki/File:Bora_Bora_(16542797633).jpg" target="_blank" rel="noopener">Wikimedia Commons</a> (CC BY 2.0)</span>
+        </div>
+        <div class="credit-row">
+          <span class="credit-label">Content photo 2</span>
+          <span class="credit-detail">&ldquo;Borabora3&rdquo; by Taka-0905 (derivative by Marsilio), <a href="https://commons.wikimedia.org/wiki/File:Borabora3.jpg" target="_blank" rel="noopener">Wikimedia Commons</a> (Public domain)</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h3>Japan</h3>
+      <div class="credit-list">
+        <div class="credit-row">
+          <span class="credit-label">Hero photo</span>
+          <span class="credit-detail">&ldquo;Torii path with lantern at Fushimi Inari Taisha Shrine, Kyoto, Japan&rdquo; by Basile Morin, <a href="https://commons.wikimedia.org/wiki/File:Torii_path_with_lantern_at_Fushimi_Inari_Taisha_Shrine,_Kyoto,_Japan.jpg" target="_blank" rel="noopener">Wikimedia Commons</a> (CC BY-SA 4.0)</span>
+        </div>
+        <div class="credit-row">
+          <span class="credit-label">Content photo 1</span>
+          <span class="credit-detail">&ldquo;Tokyo Shibuya Scramble Crossing 2018-10-09&rdquo; by Benh LIEU SONG, <a href="https://commons.wikimedia.org/wiki/File:Tokyo_Shibuya_Scramble_Crossing_2018-10-09.jpg" target="_blank" rel="noopener">Wikimedia Commons</a> (CC BY-SA 2.0)</span>
+        </div>
+        <div class="credit-row">
+          <span class="credit-label">Content photo 2</span>
+          <span class="credit-detail">&ldquo;Bamboo Forest, Arashiyama, Kyoto, Japan&rdquo; by Basile Morin, <a href="https://commons.wikimedia.org/wiki/File:Bamboo_Forest,_Arashiyama,_Kyoto,_Japan.jpg" target="_blank" rel="noopener">Wikimedia Commons</a> (CC BY-SA 4.0)</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h3>Australia</h3>
+      <div class="credit-list">
+        <div class="credit-row">
+          <span class="credit-label">Hero photo</span>
+          <span class="credit-detail">&ldquo;Aerial View of Great Barrier Reef (Ank Kumar) 09&rdquo; by Ank Kumar, <a href="https://commons.wikimedia.org/wiki/File:Aerial_View_of_Great_Barrier_Reef_(Ank_Kumar)_09.jpg" target="_blank" rel="noopener">Wikimedia Commons</a> (CC BY-SA 4.0)</span>
+        </div>
+        <div class="credit-row">
+          <span class="credit-label">Content photo 1</span>
+          <span class="credit-detail">&ldquo;Petermann Ranges (AU), Uluru-Kata Tjuta National Park, Uluru -- 2019 -- 3688&rdquo; by Dietmar Rabich, <a href="https://commons.wikimedia.org/wiki/File:Petermann_Ranges_(AU),_Uluru-Kata_Tjuta_National_Park,_Uluru_--_2019_--_3688.jpg" target="_blank" rel="noopener">Wikimedia Commons</a> (CC BY-SA 4.0)</span>
+        </div>
+        <div class="credit-row">
+          <span class="credit-label">Content photo 2</span>
+          <span class="credit-detail">&ldquo;Lascar Mossman Gorge - Daintree National Park (4559818107)&rdquo; by Jorge Láscar, <a href="https://commons.wikimedia.org/wiki/File:Lascar_Mossman_Gorge_-_Daintree_National_Park_(4559818107).jpg" target="_blank" rel="noopener">Wikimedia Commons</a> (CC BY 2.0)</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h3>Banff</h3>
+      <div class="credit-list">
+        <div class="credit-row">
+          <span class="credit-label">Hero photo</span>
+          <span class="credit-detail">&ldquo;Moraine Lake 17092005&rdquo; by Gorgo, <a href="https://commons.wikimedia.org/wiki/File:Moraine_Lake_17092005.jpg" target="_blank" rel="noopener">Wikimedia Commons</a> (Public domain)</span>
+        </div>
+        <div class="credit-row">
+          <span class="credit-label">Content photo 1</span>
+          <span class="credit-detail">&ldquo;1 lake louise pano 2019&rdquo; by Chensiyuan, <a href="https://commons.wikimedia.org/wiki/File:1_lake_louise_pano_2019.jpg" target="_blank" rel="noopener">Wikimedia Commons</a> (CC BY-SA 4.0)</span>
+        </div>
+        <div class="credit-row">
+          <span class="credit-label">Content photo 2</span>
+          <span class="credit-detail">&ldquo;Herbert Lake beim Icefields Parkway&rdquo; by Florian Fuchs, <a href="https://commons.wikimedia.org/wiki/File:Herbert_Lake_beim_Icefields_Parkway.jpg" target="_blank" rel="noopener">Wikimedia Commons</a> (CC BY 3.0)</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h3>Quebec City</h3>
+      <div class="credit-list">
+        <div class="credit-row">
+          <span class="credit-label">Hero photo</span>
+          <span class="credit-detail">&ldquo;Quebec DSC08647 - Old Quebec (36600276320)&rdquo; by Dennis G. Jarvis, <a href="https://commons.wikimedia.org/wiki/File:Quebec_DSC08647_-_Old_Quebec_(36600276320).jpg" target="_blank" rel="noopener">Wikimedia Commons</a> (CC BY-SA 2.0)</span>
+        </div>
+        <div class="credit-row">
+          <span class="credit-label">Content photo 1</span>
+          <span class="credit-detail">&ldquo;Chateau Frontenac at dusk in Quebec City&rdquo; by Wilfredor, <a href="https://commons.wikimedia.org/wiki/File:Chateau_Frontenac_at_dusk_in_Quebec_City.jpg" target="_blank" rel="noopener">Wikimedia Commons</a> (CC0)</span>
+        </div>
+        <div class="credit-row">
+          <span class="credit-label">Content photo 2</span>
+          <span class="credit-detail">&ldquo;Montmorency waterfall, Québec, Québec&rdquo; by Wilfredor, <a href="https://commons.wikimedia.org/wiki/File:Montmorency_waterfall,_Qu%C3%A9bec,_Qu%C3%A9bec.jpg" target="_blank" rel="noopener">Wikimedia Commons</a> (CC BY-SA 4.0)</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h3>Big Sur</h3>
+      <div class="credit-list">
+        <div class="credit-row">
+          <span class="credit-label">Hero photo</span>
+          <span class="credit-detail">&ldquo;Bixby Creek Bridge May 2011 panorama&rdquo; by King of Hearts, <a href="https://commons.wikimedia.org/wiki/File:Bixby_Creek_Bridge_May_2011_panorama.jpg" target="_blank" rel="noopener">Wikimedia Commons</a> (CC BY-SA 3.0)</span>
+        </div>
+        <div class="credit-row">
+          <span class="credit-label">Content photo 1</span>
+          <span class="credit-detail">&ldquo;McWay Falls Big Sur May 2011 001&rdquo; by King of Hearts, <a href="https://commons.wikimedia.org/wiki/File:McWay_Falls_Big_Sur_May_2011_001.jpg" target="_blank" rel="noopener">Wikimedia Commons</a> (CC BY-SA 3.0)</span>
+        </div>
+        <div class="credit-row">
+          <span class="credit-label">Content photo 2</span>
+          <span class="credit-detail">&ldquo;Route 1 - Big Sur Coast Highway - Big Sur Coastline Cliffs - NARA&rdquo; by U.S. National Archives, <a href="https://commons.wikimedia.org/wiki/File:Route_1_-_Big_Sur_Coast_Highway_-_Big_Sur_Coastline_Cliffs_-_NARA_-_7721421.jpg" target="_blank" rel="noopener">Wikimedia Commons</a> (Public domain)</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h3>Sedona</h3>
+      <div class="credit-list">
+        <div class="credit-row">
+          <span class="credit-label">Hero photo</span>
+          <span class="credit-detail">&ldquo;Cathedral Rock - Sedona AZ-1&rdquo; by Terrydarc, <a href="https://commons.wikimedia.org/wiki/File:Cathedral_Rock_-_Sedona_AZ-1.jpg" target="_blank" rel="noopener">Wikimedia Commons</a> (CC BY-SA 3.0)</span>
+        </div>
+        <div class="credit-row">
+          <span class="credit-label">Content photo 1</span>
+          <span class="credit-detail">&ldquo;Sedona Sunset Over Rocks With Clouds&rdquo; by A125125125, <a href="https://commons.wikimedia.org/wiki/File:Sedona_Sunset_Over_Rocks_With_Clouds.JPG" target="_blank" rel="noopener">Wikimedia Commons</a> (CC BY-SA 4.0)</span>
+        </div>
+        <div class="credit-row">
+          <span class="credit-label">Content photo 2</span>
+          <span class="credit-detail">&ldquo;Sedona Arizona-27527-6&rdquo; by Ken Thomas, <a href="https://commons.wikimedia.org/wiki/File:Sedona_Arizona-27527-6.jpg" target="_blank" rel="noopener">Wikimedia Commons</a> (Public domain)</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h3>Journal — Jamaica jerk chicken</h3>
+      <div class="credit-list">
+        <div class="credit-row">
+          <span class="credit-label">Hero photo</span>
+          <span class="credit-detail">&ldquo;Jerk chicken @ The Jamaican Grill&rdquo; by Hajime NAKANO, <a href="https://commons.wikimedia.org/wiki/File:Jerk_chicken@The_Jamaican_Grill_(162928762).jpg" target="_blank" rel="noopener">Wikimedia Commons</a> (CC BY 2.0)</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h3>Journal — Amalfi fishing villages</h3>
+      <div class="credit-list">
+        <div class="credit-row">
+          <span class="credit-label">Hero photo</span>
+          <span class="credit-detail">&ldquo;Cetara (Italy)&rdquo; by Bernard Gagnon, <a href="https://commons.wikimedia.org/wiki/File:Cetara_(Italy).jpg" target="_blank" rel="noopener">Wikimedia Commons</a> (CC BY 4.0)</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h3>Journal — Kyoto loop</h3>
+      <div class="credit-list">
+        <div class="credit-row">
+          <span class="credit-label">Hero photo</span>
+          <span class="credit-detail">&ldquo;Gion in evening&rdquo; by Chi King, <a href="https://commons.wikimedia.org/wiki/File:Gion_in_evening.jpg" target="_blank" rel="noopener">Wikimedia Commons</a> (CC BY 3.0)</span>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="brand">Travel <em>Gemz</em></div>
+      <p class="tagline">Fourteen places worth chasing, and the guides to go with them.</p>
+    </div>
+    <div class="flinks">
+      <a href="index.html#destinations">Destinations</a>
+      <a href="journal.html">Journal</a>
+      <a href="index.html#why">Why us</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+  <div class="wrap fbottom">
+    &copy; 2026 Travel Gemz. All rights reserved. &middot; <a href="credits.html" style="color:inherit;">Photo credits</a>
+  </div>
+</footer>
+
+<a href="#" class="back-to-top" id="back-to-top" aria-label="Back to top">&uarr;</a>
+<script>
+(function() {
+  var btn = document.getElementById('back-to-top');
+  if (!btn) return;
+  function toggle() {
+    if (window.scrollY > 600) { btn.classList.add('is-visible'); }
+    else { btn.classList.remove('is-visible'); }
+  }
+  window.addEventListener('scroll', toggle, { passive: true });
+  toggle();
+  btn.addEventListener('click', function(e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Journal — Travel Gemz</title>
+<meta name="description" content="Real detail on where to eat, what to skip, and how to time it — the Travel Gemz journal, one destination at a time.">
+<link rel="canonical" href="https://travel.gemzonline.com/journal.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Journal — Travel Gemz">
+<meta property="og:description" content="Real detail on where to eat, what to skip, and how to time it — one destination at a time.">
+<meta property="og:url" content="https://travel.gemzonline.com/journal.html">
+<meta property="og:site_name" content="Travel Gemz">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink: #0D2B29; --ink-soft: #123B37;
+    --parchment: #F2EAD8; --parchment-deep: #E9DDC1;
+    --emerald: #1F5C4C; --emerald-deep: #144034;
+    --gold: #C79A49; --gold-soft: #E4C888;
+    --cream: #FBF7EC; --text-dark: #16241F; --text-mute: #4B5C55;
+    --serif: 'Fraunces', serif; --sans: 'Inter', sans-serif;
+  }
+  *{ box-sizing: border-box; margin:0; padding:0; }
+  html{ scroll-behavior: smooth; }
+  body{ font-family: var(--sans); color: var(--text-dark); background: var(--parchment); line-height: 1.55; overflow-x: hidden; }
+  a{ color: inherit; text-decoration: none; }
+  img{ max-width: 100%; display:block; }
+  .wrap{ max-width: 1180px; margin: 0 auto; padding: 0 32px; }
+
+  header{ position: absolute; top:0; left:0; right:0; z-index: 20; padding: 28px 0; pointer-events: none; }
+  nav.wrap{ display:flex; align-items:center; justify-content: space-between; }
+  .brand{ font-family: var(--serif); font-size: 22px; font-weight: 500; color: var(--cream); pointer-events: auto; }
+  .brand em{ font-style: normal; color: var(--gold-soft); }
+  .navlinks{ display:flex; gap: 32px; font-size: 15px; color: var(--cream); pointer-events: auto; }
+  .navlinks a{ opacity: 0.88; transition: opacity .2s ease; }
+  .navlinks a:hover{ opacity: 1; }
+  .menu-toggle{
+    display:none; background:none; border:none; cursor:pointer; padding:8px;
+    font-size: 24px; line-height:1; color: var(--cream); z-index: 31; position:relative;
+    pointer-events: auto;
+  }
+
+  .hub-hero{
+    position: relative; min-height: 50vh; display:flex; align-items:flex-end;
+    background: radial-gradient(ellipse at 80% 10%, rgba(199,154,73,0.2), transparent 55%),
+      linear-gradient(200deg, #0D2B29 0%, #123B37 45%, #1F5C4C 100%);
+    color: var(--cream); padding-bottom: 64px;
+  }
+  .hub-hero .wrap{ position: relative; z-index: 2; }
+  .region-label{ font-family: var(--serif); font-style: italic; font-size: 15px; color: var(--gold-soft); margin-bottom: 16px; }
+  .hub-hero h1{ font-family: var(--serif); font-weight: 500; font-size: clamp(36px, 5.4vw, 58px); line-height: 1.08; max-width: 16ch; }
+  .hub-hero p.lede{ margin-top: 22px; max-width: 52ch; font-size: 17px; color: #DDE7E1; }
+  .facet-cut{
+    position: absolute; left:0; right:0; bottom: -1px; height: 70px; background: var(--parchment);
+    clip-path: polygon(0 100%, 100% 100%, 100% 45%, 64% 100%, 40% 15%, 0 70%);
+  }
+
+  .directory{ padding: 70px 0 110px; }
+  .article-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+  .article-card{ background: var(--cream); border: 1px solid var(--parchment-deep); display:block; transition: transform .2s ease, border-color .2s ease; }
+  .article-card:hover{ transform: translateY(-3px); border-color: var(--emerald); }
+  .article-card .thumb{ height: 190px; background-size: cover; background-position: center; }
+  .article-card .body{ padding: 22px 24px 26px; }
+  .article-card .tag{ font-size: 13px; color: var(--emerald); margin-bottom: 10px; }
+  .article-card h4{ font-family: var(--serif); font-weight: 500; font-size: 20px; line-height: 1.3; color: var(--ink); }
+  .article-card p{ font-size: 14.5px; color: var(--text-mute); margin-top: 10px; }
+
+  footer{ background: var(--ink); color: #B9C7C1; padding: 56px 0 40px; }
+  footer .wrap{ display:flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 30px; }
+  footer .brand{ color: var(--cream); margin-bottom: 10px; }
+  footer .tagline{ font-size: 14px; max-width: 34ch; color: #9CADA5; }
+  footer .flinks{ display:flex; flex-wrap: wrap; gap: 12px 28px; font-size: 14.5px; }
+  footer .flinks a:hover{ color: var(--gold-soft); }
+  .fbottom{ margin-top: 46px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.08); font-size: 13px; color: #7C8D86; }
+
+  @media (max-width: 860px){
+    .article-grid{ grid-template-columns: 1fr 1fr; }
+    .navlinks{
+      display:none; position:fixed; inset:0; z-index:30;
+      background: var(--ink); flex-direction:column; align-items:center; justify-content:center;
+      gap: 30px; font-size: 20px;
+    }
+    .navlinks.open{ display:flex; }
+    .menu-toggle{ display:block; }
+    .hub-hero { align-items: flex-start; padding-top: 108px; }
+  }
+  @media (max-width: 560px){ .article-grid{ grid-template-columns: 1fr; } }
+
+  .back-to-top{
+    position: fixed; bottom: 2em; right: 2em; z-index: 9999;
+    width: 44px; height: 44px; border-radius: 50%;
+    background: var(--ink); color: var(--gold-soft);
+    display:flex; align-items:center; justify-content:center;
+    font-size: 1.3rem; line-height:1; text-decoration:none!important;
+    box-shadow: 0 4px 14px rgba(13,43,41,.25);
+    opacity:0; visibility:hidden; transform: translateY(8px); pointer-events:none;
+    transition: opacity .25s ease, transform .25s ease, visibility .25s;
+  }
+  .back-to-top.is-visible{ opacity:1; visibility:visible; transform:translateY(0); pointer-events:auto; }
+  .back-to-top:hover{ background: var(--emerald-deep); }
+  @media (max-width:600px){
+    .back-to-top{ bottom:1.2em; right:1.2em; width:40px; height:40px; font-size:1.1rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <div class="brand">Travel <em>Gemz</em></div>
+    <button class="menu-toggle" aria-label="Toggle menu" onclick="const o=document.querySelector('.navlinks').classList.toggle('open');this.textContent=o?'✕':'☰';">☰</button>
+    <div class="navlinks">
+      <a href="index.html#destinations">Destinations</a>
+      <a href="journal.html">Journal</a>
+      <a href="index.html#why">Why us</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hub-hero">
+  <div class="wrap">
+    <div class="region-label">The journal</div>
+    <h1>Real detail, one destination at a time.</h1>
+    <p class="lede">Where to eat, what to skip, and how to time it right — written from time actually spent on the ground, not recycled brochure copy.</p>
+  </div>
+  <div class="facet-cut"></div>
+</section>
+
+<section class="directory">
+  <div class="wrap">
+    <div class="article-grid">
+
+      <a href="journal-jamaica-jerk-chicken.html" class="article-card">
+        <div class="thumb" style="background-image:url('https://travel.gemzonline.com/wp-content/uploads/2026/09/journal-jamaica.jpg')"></div>
+        <div class="body">
+          <div class="tag">Jamaica</div>
+          <h4>Where to eat jerk chicken like a local in Ocho Rios</h4>
+          <p>Skip the resort buffet — the best plate in town is at a roadside pit twenty minutes up the coast.</p>
+        </div>
+      </a>
+
+      <a href="journal-amalfi-fishing-villages.html" class="article-card">
+        <div class="thumb" style="background-image:url('https://travel.gemzonline.com/wp-content/uploads/2026/09/journal-amalfi.jpg')"></div>
+        <div class="body">
+          <div class="tag">Amalfi Coast</div>
+          <h4>The quiet fishing villages next door to Amalfi</h4>
+          <p>Everyone stops in Positano. Three towns over, you'll have the harbor almost to yourself.</p>
+        </div>
+      </a>
+
+      <a href="journal-kyoto-loop.html" class="article-card">
+        <div class="thumb" style="background-image:url('https://travel.gemzonline.com/wp-content/uploads/2026/09/journal-kyoto.jpg')"></div>
+        <div class="body">
+          <div class="tag">Japan</div>
+          <h4>A three-day loop through Kyoto without the crowds</h4>
+          <p>The same temples, the same gardens — just at the hours everyone else skips.</p>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="brand">Travel <em>Gemz</em></div>
+      <p class="tagline">Fourteen places worth chasing, and the guides to go with them.</p>
+    </div>
+    <div class="flinks">
+      <a href="index.html#destinations">Destinations</a>
+      <a href="journal.html">Journal</a>
+      <a href="index.html#why">Why us</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+  <div class="wrap fbottom">
+    &copy; 2026 Travel Gemz. All rights reserved. &middot; <a href="credits.html" style="color:inherit;">Photo credits</a>
+  </div>
+</footer>
+
+<a href="#" class="back-to-top" id="back-to-top" aria-label="Back to top">&uarr;</a>
+<script>
+(function() {
+  var btn = document.getElementById('back-to-top');
+  if (!btn) return;
+  function toggle() {
+    if (window.scrollY > 600) { btn.classList.add('is-visible'); }
+    else { btn.classList.remove('is-visible'); }
+  }
+  window.addEventListener('scroll', toggle, { passive: true });
+  toggle();
+  btn.addEventListener('click', function(e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+})();
+</script>
+</body>
+</html>

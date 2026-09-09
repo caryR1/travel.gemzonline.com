@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Travel Gemz — Rare places, well chosen</title>
+<meta name="description" content="Travel Gemz covers fourteen handpicked destinations, not four hundred — real guides to where to stay, eat, and go once you land, from Jamaica to Japan.">
+<link rel="canonical" href="https://travel.gemzonline.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Travel Gemz — Rare places, well chosen">
+<meta property="og:description" content="Fourteen handpicked destinations, not four hundred — real guides to where to stay, eat, and go once you land.">
+<meta property="og:url" content="https://travel.gemzonline.com/">
+<meta property="og:site_name" content="Travel Gemz">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink: #0D2B29;
+    --ink-soft: #123B37;
+    --parchment: #F2EAD8;
+    --parchment-deep: #E9DDC1;
+    --emerald: #1F5C4C;
+    --emerald-deep: #144034;
+    --gold: #C79A49;
+    --gold-soft: #E4C888;
+    --cream: #FBF7EC;
+    --text-dark: #16241F;
+    --text-mute: #4B5C55;
+    --serif: 'Fraunces', serif;
+    --sans: 'Inter', sans-serif;
+  }
+
+  *{ box-sizing: border-box; margin:0; padding:0; }
+
+  html{ scroll-behavior: smooth; }
+
+  body{
+    font-family: var(--sans);
+    color: var(--text-dark);
+    background: var(--parchment);
+    line-height: 1.55;
+    overflow-x: hidden;
+  }
+
+  a{ color: inherit; text-decoration: none; }
+  img{ max-width: 100%; display:block; }
+
+  .wrap{
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  /* ---------- NAV ---------- */
+  header{
+    position: absolute;
+    top:0; left:0; right:0;
+    z-index: 20;
+    padding: 28px 0;
+    pointer-events: none;
+  }
+  nav.wrap{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+  }
+  .brand{
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--cream);
+    letter-spacing: 0.01em;
+    pointer-events: auto;
+  }
+  .brand em{ font-style: normal; color: var(--gold-soft); }
+  .navlinks{
+    display:flex;
+    gap: 36px;
+    font-size: 15px;
+    color: var(--cream);
+    pointer-events: auto;
+  }
+  .navlinks a{ opacity: 0.88; transition: opacity .2s ease; }
+  .navlinks a:hover{ opacity: 1; }
+  .menu-toggle{
+    display:none; background:none; border:none; cursor:pointer; padding:8px;
+    font-size: 24px; line-height:1; color: var(--cream); z-index: 31; position:relative;
+    pointer-events: auto;
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position: relative;
+    min-height: 92vh;
+    display:flex;
+    align-items:center;
+    color: var(--cream);
+    padding-bottom: 90px;
+    overflow: hidden;
+  }
+  .hero-slides{ position: absolute; inset: 0; z-index: 0; }
+  .hero-slides::after{
+    content:"";
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse at 78% 15%, rgba(199,154,73,0.22), transparent 55%),
+      linear-gradient(200deg, rgba(13,43,41,0.5) 0%, rgba(18,59,55,0.4) 45%, rgba(31,92,76,0.42) 100%);
+    z-index: 1;
+  }
+  .hero-slides .slide{
+    filter: brightness(1.08) saturate(1.08);
+    position: absolute; inset: 0;
+    background-size: cover; background-position: center;
+    opacity: 0;
+    animation: heroFade 25s infinite;
+  }
+  .hero-slides .slide:nth-child(1){ animation-delay: 0s; }
+  .hero-slides .slide:nth-child(2){ animation-delay: 5s; }
+  .hero-slides .slide:nth-child(3){ animation-delay: 10s; }
+  .hero-slides .slide:nth-child(4){ animation-delay: 15s; }
+  .hero-slides .slide:nth-child(5){ animation-delay: 20s; }
+  @keyframes heroFade{
+    0%{ opacity: 0; }
+    4%{ opacity: 1; }
+    20%{ opacity: 1; }
+    24%{ opacity: 0; }
+    100%{ opacity: 0; }
+  }
+  @media (prefers-reduced-motion: reduce){
+    .hero-slides .slide{ animation: none; opacity: 0; }
+    .hero-slides .slide:first-child{ opacity: 1; }
+  }
+  .hero .wrap{ position: relative; z-index: 2; }
+  .hero-eyebrow{
+    font-size: 15px;
+    color: var(--gold-soft);
+    margin-bottom: 18px;
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+  }
+  .hero h1{
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(40px, 6vw, 76px);
+    line-height: 1.05;
+    max-width: 15ch;
+    letter-spacing: -0.01em;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.35);
+    opacity: 0;
+    animation: rise 900ms cubic-bezier(.2,.7,.3,1) 150ms forwards;
+  }
+  .hero p.lede{
+    margin-top: 26px;
+    max-width: 46ch;
+    font-size: 18px;
+    color: #DDE7E1;
+    text-shadow: 0 1px 12px rgba(0,0,0,0.3);
+    opacity: 0;
+    animation: rise 900ms cubic-bezier(.2,.7,.3,1) 320ms forwards;
+  }
+  .hero-actions{
+    margin-top: 40px;
+    display:flex;
+    gap: 20px;
+    align-items:center;
+    opacity: 0;
+    animation: rise 900ms cubic-bezier(.2,.7,.3,1) 480ms forwards;
+  }
+  @keyframes rise{
+    from{ opacity:0; transform: translateY(18px); }
+    to{ opacity:1; transform: translateY(0); }
+  }
+  .btn-gold{
+    background: var(--gold);
+    color: #24190A;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 15px 30px;
+    border-radius: 2px;
+    display:inline-block;
+    transition: background .2s ease, transform .2s ease;
+  }
+  .btn-gold:hover{ background: var(--gold-soft); transform: translateY(-1px); }
+  .link-quiet{
+    font-size: 15px;
+    color: var(--cream);
+    border-bottom: 1px solid rgba(251,247,236,0.4);
+    padding-bottom: 3px;
+    transition: border-color .2s ease;
+  }
+  .link-quiet:hover{ border-color: var(--gold-soft); }
+
+  /* faceted cut divider between hero and next section */
+  .facet-cut{
+    position: absolute;
+    left:0; right:0; bottom: -1px;
+    height: 90px;
+    background: var(--parchment);
+    clip-path: polygon(0 100%, 100% 100%, 100% 40%, 62% 100%, 38% 10%, 0 68%);
+  }
+
+  /* ---------- PHILOSOPHY / INTRO ---------- */
+  .intro{
+    padding: 120px 0 90px;
+  }
+  .intro .grid{
+    display:grid;
+    grid-template-columns: 0.9fr 1.4fr;
+    gap: 64px;
+    align-items: start;
+  }
+  .intro h2{
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(28px, 3.4vw, 40px);
+    line-height: 1.15;
+    color: var(--ink);
+  }
+  .intro .body p{
+    font-size: 17px;
+    color: var(--text-mute);
+    max-width: 62ch;
+  }
+  .intro .body p + p{ margin-top: 16px; }
+  .gem-mark{
+    display:inline-block;
+    width: 34px; height: 34px;
+    margin-bottom: 22px;
+  }
+
+  /* ---------- DESTINATIONS ---------- */
+  .destinations{
+    padding: 40px 0 100px;
+  }
+  .region-block{ margin-bottom: 84px; }
+  .region-head{
+    display:flex;
+    align-items: baseline;
+    gap: 18px;
+    margin-bottom: 34px;
+    border-bottom: 1px solid rgba(31,92,76,0.18);
+    padding-bottom: 18px;
+  }
+  .region-head h3{
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 26px;
+    color: var(--emerald-deep);
+  }
+  .region-head span{
+    font-size: 14px;
+    color: var(--text-mute);
+  }
+
+  .mosaic{
+    display:grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+  }
+  .dcard{
+    position: relative;
+    border-radius: 3px;
+    overflow: hidden;
+    min-height: 260px;
+    display:flex;
+    align-items: flex-end;
+    padding: 26px;
+    color: var(--cream);
+    isolation: isolate;
+  }
+  .dcard::before{
+    content:"";
+    position:absolute; inset:0;
+    background-image:
+      repeating-linear-gradient(115deg, rgba(255,255,255,0.05) 0 2px, transparent 2px 34px),
+      linear-gradient(180deg, rgba(13,43,41,0.05) 0%, rgba(13,43,41,0.8) 100%),
+      var(--photo, var(--facet-grad));
+    background-size: auto, cover, cover;
+    background-position: center, center, center;
+    z-index: -1;
+  }
+  .dcard .country{
+    font-size: 13px;
+    letter-spacing: 0.02em;
+    opacity: 0.8;
+    margin-bottom: 6px;
+  }
+  .dcard h4{
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 27px;
+    line-height: 1.15;
+  }
+  .dcard p{
+    font-size: 14.5px;
+    margin-top: 8px;
+    max-width: 30ch;
+    color: #EFE9D8;
+    opacity: 0.92;
+  }
+
+  .span-3{ grid-column: span 3; }
+  .span-2{ grid-column: span 2; }
+  .span-4{ grid-column: span 4; }
+  .tall{ min-height: 360px; }
+
+  /* facet palette rotation */
+  .g1{ --facet-grad: linear-gradient(150deg,#0D2B29,#1F5C4C); }
+  .g2{ --facet-grad: linear-gradient(150deg,#123B37,#2E7A63); }
+  .g3{ --facet-grad: linear-gradient(150deg,#3B2A12,#8A6423); }
+  .g4{ --facet-grad: linear-gradient(150deg,#1B2E4A,#3C5C82); }
+  .g5{ --facet-grad: linear-gradient(150deg,#2A1F3B,#5B4A82); }
+  .g6{ --facet-grad: linear-gradient(150deg,#123B37,#C79A49); }
+  .g7{ --facet-grad: linear-gradient(150deg,#0D2B29,#8A6423); }
+
+  /* ---------- WHY SECTION ---------- */
+  .why{
+    background: var(--ink);
+    color: var(--cream);
+    padding: 100px 0;
+  }
+  .why .head{
+    max-width: 60ch;
+    margin-bottom: 60px;
+  }
+  .why h2{
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(28px, 3.2vw, 38px);
+    line-height: 1.2;
+  }
+  .why-grid{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
+  }
+  .why-item h3{
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 21px;
+    color: var(--gold-soft);
+    margin-bottom: 12px;
+  }
+  .why-item p{
+    font-size: 15.5px;
+    color: #D6E0DA;
+    max-width: 34ch;
+  }
+
+  /* ---------- BLOG TEASER ---------- */
+  .blog{
+    padding: 100px 0 110px;
+  }
+  .blog .head{
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 46px;
+    border-bottom: 1px solid rgba(31,92,76,0.18);
+    padding-bottom: 22px;
+  }
+  .blog h2{
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(26px, 3vw, 34px);
+    color: var(--ink);
+  }
+  .blog-grid{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+  .post{
+    background: var(--cream);
+    border: 1px solid var(--parchment-deep);
+    display: block;
+    transition: transform .2s ease, border-color .2s ease;
+  }
+  .post:hover{ transform: translateY(-3px); border-color: var(--emerald); }
+  .post .thumb{
+    height: 170px;
+    background-image: linear-gradient(180deg, rgba(13,43,41,0.05) 0%, rgba(13,43,41,0.35) 100%), var(--photo, var(--facet-grad));
+    background-size: cover; background-position: center;
+  }
+  .post .body{
+    padding: 22px 24px 26px;
+  }
+  .post .tag{
+    font-size: 13px;
+    color: var(--emerald);
+    margin-bottom: 10px;
+  }
+  .post h4{
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 1.3;
+    color: var(--ink);
+  }
+  .post p{
+    font-size: 14.5px;
+    color: var(--text-mute);
+    margin-top: 10px;
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    background: var(--ink);
+    color: #B9C7C1;
+    padding: 56px 0 40px;
+  }
+  footer .wrap{
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  footer .brand{
+    color: var(--cream);
+    margin-bottom: 10px;
+  }
+  footer .tagline{
+    font-size: 14px;
+    max-width: 34ch;
+    color: #9CADA5;
+  }
+  footer .flinks{
+    display:flex;
+    flex-wrap: wrap;
+    gap: 12px 28px;
+    font-size: 14.5px;
+  }
+  footer .flinks a:hover{ color: var(--gold-soft); }
+  .fbottom{
+    margin-top: 46px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    font-size: 13px;
+    color: #7C8D86;
+  }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 860px){
+    .intro .grid{ grid-template-columns: 1fr; gap: 30px; }
+    .mosaic{ grid-template-columns: repeat(2,1fr); }
+    .span-3, .span-2, .span-4{ grid-column: span 2; }
+    .why-grid, .blog-grid{ grid-template-columns: 1fr; gap: 36px; }
+    .navlinks{
+      display:none; position:fixed; inset:0; z-index:30;
+      background: var(--ink); flex-direction:column; align-items:center; justify-content:center;
+      gap: 30px; font-size: 20px;
+    }
+    .navlinks.open{ display:flex; }
+    .menu-toggle{ display:block; }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .hero h1, .hero p.lede, .hero-actions{ animation: none; opacity: 1; }
+  }
+
+  .back-to-top{
+    position: fixed; bottom: 2em; right: 2em; z-index: 9999;
+    width: 44px; height: 44px; border-radius: 50%;
+    background: var(--ink); color: var(--gold-soft);
+    display:flex; align-items:center; justify-content:center;
+    font-size: 1.3rem; line-height:1; text-decoration:none!important;
+    box-shadow: 0 4px 14px rgba(13,43,41,.25);
+    opacity:0; visibility:hidden; transform: translateY(8px); pointer-events:none;
+    transition: opacity .25s ease, transform .25s ease, visibility .25s;
+  }
+  .back-to-top.is-visible{ opacity:1; visibility:visible; transform:translateY(0); pointer-events:auto; }
+  .back-to-top:hover{ background: var(--emerald-deep); }
+  @media (max-width:600px){
+    .back-to-top{ bottom:1.2em; right:1.2em; width:40px; height:40px; font-size:1.1rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <div class="brand">Travel <em>Gemz</em></div>
+    <button class="menu-toggle" aria-label="Toggle menu" onclick="const o=document.querySelector('.navlinks').classList.toggle('open');this.textContent=o?'\u2715':'\u2630';">☰</button>
+    <div class="navlinks">
+      <a href="#destinations">Destinations</a>
+      <a href="journal.html">Journal</a>
+      <a href="#why">Why us</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-slides">
+    <div class="slide" style="background-image:url('https://travel.gemzonline.com/wp-content/uploads/2026/09/santorini-hero.jpg')"></div>
+    <div class="slide" style="background-image:url('https://travel.gemzonline.com/wp-content/uploads/2026/09/bora-bora-hero.jpg')"></div>
+    <div class="slide" style="background-image:url('https://travel.gemzonline.com/wp-content/uploads/2026/09/banff-hero.jpg')"></div>
+    <div class="slide" style="background-image:url('https://travel.gemzonline.com/wp-content/uploads/2026/09/jamaica-hero.jpg')"></div>
+    <div class="slide" style="background-image:url('https://travel.gemzonline.com/wp-content/uploads/2026/09/japan-hero.jpg')"></div>
+  </div>
+  <div class="wrap">
+    <div class="hero-eyebrow">Fourteen places, chosen carefully</div>
+    <h1>Some places are worth the whole year of waiting.</h1>
+    <p class="lede">We pass over the crowded top-ten lists and build each trip around a handful of destinations we'd send our own family to — from Jamaica's cliffs to the quiet backroads outside Kyoto.</p>
+    <div class="hero-actions">
+      <a href="#destinations" class="btn-gold">See the destinations</a>
+      <a href="journal.html" class="link-quiet">Read the journal</a>
+    </div>
+  </div>
+  <div class="facet-cut"></div>
+</section>
+
+<section class="intro">
+  <div class="wrap grid">
+    <div>
+      <svg class="gem-mark" viewBox="0 0 40 40" fill="none">
+        <path d="M20 3L34 14L20 37L6 14L20 3Z" stroke="#C79A49" stroke-width="1.4"/>
+        <path d="M6 14H34M13 14L20 37L27 14M13 14L20 3L27 14" stroke="#C79A49" stroke-width="1" opacity="0.6"/>
+      </svg>
+      <h2>Named after the places<br>worth cutting and keeping.</h2>
+    </div>
+    <div class="body">
+      <p>A gem isn't valuable because it's the biggest stone in the case — it's the one cut and set with care. That's the standard we hold every destination on this site to. No filler islands, no padded itineraries.</p>
+      <p>Each page here was chosen for a specific reason: a coastline, a dish, a season, a feeling you can't quite get anywhere else. We write about what to actually do once you land, not just where the airport is.</p>
+    </div>
+  </div>
+</section>
+
+<section class="destinations" id="destinations">
+  <div class="wrap">
+
+    <div class="region-block">
+      <div class="region-head">
+        <h3><a href="caribbean-latin-america.html" style="border-bottom:1px solid rgba(31,92,76,0.3);">Caribbean &amp; Latin America</a></h3>
+        <span>Warm water, slower clocks</span>
+      </div>
+      <div class="mosaic">
+        <a href="destination-jamaica.html" class="dcard g1 span-4 tall" style="--photo:url('https://travel.gemzonline.com/wp-content/uploads/2026/09/jamaica-hero.jpg')">
+          <div>
+            <div class="country">Jamaica</div>
+            <h4>Jamaica</h4>
+            <p>Cliffside sunsets in Negril and jerk smoke drifting over Ocho Rios.</p>
+          </div>
+        </a>
+        <a href="destination-turks-caicos.html" class="dcard g2 span-2 tall" style="--photo:url('https://travel.gemzonline.com/wp-content/uploads/2026/09/turks-caicos-hero.jpg')">
+          <div>
+            <div class="country">British Overseas Territory</div>
+            <h4>Turks &amp; Caicos</h4>
+            <p>The quietest, bluest sand in the Caribbean.</p>
+          </div>
+        </a>
+        <a href="destination-tulum.html" class="dcard g3 span-2" style="--photo:url('https://travel.gemzonline.com/wp-content/uploads/2026/09/tulum-hero.jpg')">
+          <div>
+            <div class="country">Mexico</div>
+            <h4>Tulum</h4>
+            <p>Jungle ruins, cenotes, and a coastline that stays boutique.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="region-block">
+      <div class="region-head">
+        <h3><a href="europe.html" style="border-bottom:1px solid rgba(31,92,76,0.3);">Europe</a></h3>
+        <span>Old stone, longer dinners</span>
+      </div>
+      <div class="mosaic">
+        <a href="destination-amalfi-coast.html" class="dcard g4 span-3 tall" style="--photo:url('https://travel.gemzonline.com/wp-content/uploads/2026/09/amalfi-coast-hero.jpg')">
+          <div>
+            <div class="country">Italy</div>
+            <h4>Amalfi Coast</h4>
+            <p>Lemon groves stacked above cliffs that drop straight into the sea.</p>
+          </div>
+        </a>
+        <a href="destination-santorini.html" class="dcard g5 span-3 tall" style="--photo:url('https://travel.gemzonline.com/wp-content/uploads/2026/09/santorini-hero.jpg')">
+          <div>
+            <div class="country">Greece</div>
+            <h4>Santorini</h4>
+            <p>Whitewashed villages built for exactly one kind of sunset.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="region-block">
+      <div class="region-head">
+        <h3><a href="asia-pacific.html" style="border-bottom:1px solid rgba(31,92,76,0.3);">Asia &amp; the Pacific</a></h3>
+        <span>Temples, reefs, and rice terraces</span>
+      </div>
+      <div class="mosaic">
+        <a href="destination-palawan.html" class="dcard g6 span-2" style="--photo:url('https://travel.gemzonline.com/wp-content/uploads/2026/09/palawan-hero.jpg')">
+          <div>
+            <div class="country">Philippines</div>
+            <h4>Palawan</h4>
+            <p>Limestone islands rising straight out of glass-clear lagoons.</p>
+          </div>
+        </a>
+        <a href="destination-bali.html" class="dcard g2 span-2" style="--photo:url('https://travel.gemzonline.com/wp-content/uploads/2026/09/bali-hero-scaled.jpg')">
+          <div>
+            <div class="country">Indonesia</div>
+            <h4>Bali</h4>
+            <p>Rice terraces, temple gates, and mornings that start slow.</p>
+          </div>
+        </a>
+        <a href="destination-bora-bora.html" class="dcard g1 span-2" style="--photo:url('https://travel.gemzonline.com/wp-content/uploads/2026/09/bora-bora-hero.jpg')">
+          <div>
+            <div class="country">French Polynesia</div>
+            <h4>Bora Bora</h4>
+            <p>Water so clear the lagoon looks lit from underneath.</p>
+          </div>
+        </a>
+        <a href="destination-japan.html" class="dcard g7 span-3 tall" style="--photo:url('https://travel.gemzonline.com/wp-content/uploads/2026/09/japan-hero.jpg')">
+          <div>
+            <div class="country">Japan</div>
+            <h4>Japan</h4>
+            <p>Kyoto's back alleys, Tokyo's neon, and the trains that connect them.</p>
+          </div>
+        </a>
+        <a href="destination-australia.html" class="dcard g4 span-3 tall" style="--photo:url('https://travel.gemzonline.com/wp-content/uploads/2026/09/australia-hero.jpg')">
+          <div>
+            <div class="country">Australia</div>
+            <h4>Australia</h4>
+            <p>Reef, outback, and coastline with room to disappear into.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="region-block">
+      <div class="region-head">
+        <h3><a href="north-america.html" style="border-bottom:1px solid rgba(31,92,76,0.3);">North America</a></h3>
+        <span>Closer to home, still worth the trip</span>
+      </div>
+      <div class="mosaic">
+        <a href="destination-banff.html" class="dcard g4 span-3" style="--photo:url('https://travel.gemzonline.com/wp-content/uploads/2026/09/banff-hero.jpg')">
+          <div>
+            <div class="country">Alberta, Canada</div>
+            <h4>Banff</h4>
+            <p>Glacier lakes the color of blue topaz, ringed by the Rockies.</p>
+          </div>
+        </a>
+        <a href="destination-quebec-city.html" class="dcard g5 span-3" style="--photo:url('https://travel.gemzonline.com/wp-content/uploads/2026/09/quebec-city-hero-scaled.jpg')">
+          <div>
+            <div class="country">Quebec, Canada</div>
+            <h4>Quebec City</h4>
+            <p>Cobblestone and old-world charm without the transatlantic flight.</p>
+          </div>
+        </a>
+        <a href="destination-big-sur.html" class="dcard g2 span-3" style="--photo:url('https://travel.gemzonline.com/wp-content/uploads/2026/09/big-sur-hero.jpg')">
+          <div>
+            <div class="country">California, USA</div>
+            <h4>Big Sur</h4>
+            <p>Coast highway switchbacks with a cliffside view the whole way.</p>
+          </div>
+        </a>
+        <a href="destination-sedona.html" class="dcard g3 span-3" style="--photo:url('https://travel.gemzonline.com/wp-content/uploads/2026/09/sedona-hero.jpg')">
+          <div>
+            <div class="country">Arizona, USA</div>
+            <h4>Sedona</h4>
+            <p>Red rock canyons that turn deep amber at golden hour.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="why" id="why">
+  <div class="wrap">
+    <div class="head">
+      <h2>We built this the way we'd want to plan our own trip.</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-item">
+        <h3>Handpicked, not mass-market</h3>
+        <p>Fourteen destinations, not four hundred. Every one earned its place here.</p>
+      </div>
+      <div class="why-item">
+        <h3>Written by people who've been</h3>
+        <p>Real detail on where to eat and what to skip, not recycled brochure copy.</p>
+      </div>
+      <div class="why-item">
+        <h3>One place for the whole trip</h3>
+        <p>Inspiration, itineraries, and things-to-do guides live together, not scattered across ten tabs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="blog" id="blog">
+  <div class="wrap">
+    <div class="head">
+      <h2>From the journal</h2>
+      <a href="journal.html" class="link-quiet">Read more</a>
+    </div>
+    <div class="blog-grid">
+      <a href="journal-jamaica-jerk-chicken.html" class="post">
+        <div class="thumb g1" style="--photo:url('https://travel.gemzonline.com/wp-content/uploads/2026/09/jamaica-hero.jpg')"></div>
+        <div class="body">
+          <div class="tag">Jamaica</div>
+          <h4>Where to eat jerk chicken like a local in Ocho Rios</h4>
+          <p>Skip the resort buffet — the best plate in town is at a roadside pit twenty minutes up the coast.</p>
+        </div>
+      </a>
+      <a href="journal-amalfi-fishing-villages.html" class="post">
+        <div class="thumb g4" style="--photo:url('https://travel.gemzonline.com/wp-content/uploads/2026/09/amalfi-coast-hero.jpg')"></div>
+        <div class="body">
+          <div class="tag">Amalfi Coast</div>
+          <h4>The quiet fishing villages next door to Amalfi</h4>
+          <p>Everyone stops in Positano. Three towns over, you'll have the harbor almost to yourself.</p>
+        </div>
+      </a>
+      <a href="journal-kyoto-loop.html" class="post">
+        <div class="thumb g7" style="--photo:url('https://travel.gemzonline.com/wp-content/uploads/2026/09/japan-hero.jpg')"></div>
+        <div class="body">
+          <div class="tag">Japan</div>
+          <h4>A three-day loop through Kyoto without the crowds</h4>
+          <p>The same temples, the same gardens — just at the hours everyone else skips.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <div>
+      <div class="brand">Travel <em>Gemz</em></div>
+      <p class="tagline">Fourteen places worth chasing, and the guides to go with them.</p>
+    </div>
+    <div class="flinks">
+      <a href="#destinations">Destinations</a>
+      <a href="journal.html">Journal</a>
+      <a href="#why">Why us</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+  <div class="wrap fbottom">
+    © 2026 Travel Gemz. All rights reserved. &middot; <a href="credits.html" style="color:inherit;">Photo credits</a>
+  </div>
+</footer>
+
+<a href="#" class="back-to-top" id="back-to-top" aria-label="Back to top">&uarr;</a>
+<script>
+(function() {
+  var btn = document.getElementById('back-to-top');
+  if (!btn) return;
+  function toggle() {
+    if (window.scrollY > 600) { btn.classList.add('is-visible'); }
+    else { btn.classList.remove('is-visible'); }
+  }
+  window.addEventListener('scroll', toggle, { passive: true });
+  toggle();
+  btn.addEventListener('click', function(e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://travel.gemzonline.com/sitemap.xml

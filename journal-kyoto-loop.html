@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A three-day loop through Kyoto without the crowds — Travel Gemz</title>
+<meta name="description" content="The same temples, the same gardens — just at the hours everyone else skips. A three-day Kyoto itinerary built around timing, not ticking off a list.">
+<link rel="canonical" href="https://travel.gemzonline.com/journal-kyoto-loop.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="A three-day loop through Kyoto without the crowds — Travel Gemz">
+<meta property="og:description" content="The same temples, the same gardens — just at the hours everyone else skips.">
+<meta property="og:url" content="https://travel.gemzonline.com/journal-kyoto-loop.html">
+<meta property="og:site_name" content="Travel Gemz">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink: #0D2B29; --ink-soft: #123B37;
+    --parchment: #F2EAD8; --parchment-deep: #E9DDC1;
+    --emerald: #1F5C4C; --emerald-deep: #144034;
+    --gold: #C79A49; --gold-soft: #E4C888;
+    --cream: #FBF7EC; --text-dark: #16241F; --text-mute: #4B5C55;
+    --serif: 'Fraunces', serif; --sans: 'Inter', sans-serif;
+    --facet-grad: linear-gradient(150deg,#0D2B29,#8A6423);
+    --hero-photo: url('https://travel.gemzonline.com/wp-content/uploads/2026/09/journal-kyoto.jpg');
+  }
+  *{ box-sizing: border-box; margin:0; padding:0; }
+  html{ scroll-behavior: smooth; }
+  body{ font-family: var(--sans); color: var(--text-dark); background: var(--parchment); line-height: 1.6; overflow-x: hidden; }
+  a{ color: inherit; text-decoration: none; }
+  img{ max-width: 100%; display:block; }
+  .wrap{ max-width: 1100px; margin: 0 auto; padding: 0 32px; }
+
+  header{ position: absolute; top:0; left:0; right:0; z-index: 20; padding: 28px 0; pointer-events: none; }
+  nav.wrap{ display:flex; align-items:center; justify-content: space-between; }
+  .brand{ font-family: var(--serif); font-size: 22px; font-weight: 500; color: var(--cream); pointer-events: auto; }
+  .brand em{ font-style: normal; color: var(--gold-soft); }
+  .navlinks{ display:flex; gap: 32px; font-size: 15px; color: var(--cream); pointer-events: auto; }
+  .navlinks a{ opacity: 0.88; transition: opacity .2s ease; }
+  .navlinks a:hover{ opacity: 1; }
+  .menu-toggle{
+    display:none; background:none; border:none; cursor:pointer; padding:8px;
+    font-size: 24px; line-height:1; color: var(--cream); z-index: 31; position:relative;
+    pointer-events: auto;
+  }
+
+  .dest-hero{
+    position: relative; min-height: 56vh; display:flex; align-items:flex-end;
+    background-image: radial-gradient(ellipse at 78% 12%, rgba(199,154,73,0.22), transparent 55%), linear-gradient(180deg, rgba(13,43,41,0.25) 0%, rgba(13,43,41,0.92) 100%), var(--hero-photo, var(--facet-grad));
+    background-size: cover; background-position: center; background-repeat: no-repeat;
+    color: var(--cream); padding-bottom: 60px;
+  }
+  .dest-hero .wrap{ position: relative; z-index: 2; }
+  .breadcrumb{ font-size: 14px; color: #BFD2CA; margin-bottom: 22px; }
+  .breadcrumb a:hover{ color: var(--gold-soft); }
+  .breadcrumb .sep{ margin: 0 8px; opacity: 0.5; }
+  .dest-hero .kicker{ font-family: var(--serif); font-style: italic; font-size: 15px; color: var(--gold-soft); margin-bottom: 16px; }
+  .dest-hero h1{ font-family: var(--serif); font-weight: 500; font-size: clamp(32px, 5vw, 54px); line-height: 1.1; max-width: 18ch; }
+  .facet-cut{
+    position: absolute; left:0; right:0; bottom: -1px; height: 70px; background: var(--parchment);
+    clip-path: polygon(0 100%, 100% 100%, 100% 45%, 64% 100%, 40% 15%, 0 70%);
+  }
+
+  .article-meta{ padding: 50px 0 10px; }
+  .article-meta .wrap{ max-width: 720px; display:flex; gap: 24px; font-size: 13.5px; color: var(--text-mute); border-bottom: 1px solid rgba(31,92,76,0.18); padding-bottom: 24px; }
+
+  .prose{ padding: 40px 0 40px; }
+  .prose .wrap{ max-width: 720px; }
+  .prose h2{ font-family: var(--serif); font-weight: 500; font-size: clamp(22px, 2.6vw, 27px); color: var(--ink); margin-bottom: 14px; }
+  .prose p{ font-size: 17px; color: var(--text-mute); }
+  .prose p + p{ margin-top: 14px; }
+  .prose section + section{ margin-top: 44px; }
+
+  .cta-band{ background: var(--ink); color: var(--cream); padding: 70px 0; text-align: center; margin-top: 60px; }
+  .cta-band h2{ font-family: var(--serif); font-weight: 500; font-size: clamp(24px, 2.8vw, 32px); max-width: 22ch; margin: 0 auto 26px; }
+  .btn-gold{ background: var(--gold); color: #24190A; font-weight: 600; font-size: 15px; padding: 15px 30px; border-radius: 2px; display:inline-block; transition: background .2s ease; margin: 0 8px; }
+  .btn-gold:hover{ background: var(--gold-soft); }
+  .link-quiet{ font-size: 15px; color: var(--cream); border-bottom: 1px solid rgba(251,247,236,0.4); padding-bottom: 3px; margin: 0 8px; display:inline-block; }
+  .link-quiet:hover{ border-color: var(--gold-soft); }
+
+  footer{ background: var(--ink); color: #B9C7C1; padding: 56px 0 40px; }
+  footer .wrap{ display:flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 30px; }
+  footer .brand{ color: var(--cream); margin-bottom: 10px; }
+  footer .tagline{ font-size: 14px; max-width: 34ch; color: #9CADA5; }
+  footer .flinks{ display:flex; flex-wrap: wrap; gap: 12px 28px; font-size: 14.5px; }
+  footer .flinks a:hover{ color: var(--gold-soft); }
+  .fbottom{ margin-top: 46px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.08); font-size: 13px; color: #7C8D86; }
+
+  @media (max-width: 860px){
+    .navlinks{
+      display:none; position:fixed; inset:0; z-index:30;
+      background: var(--ink); flex-direction:column; align-items:center; justify-content:center;
+      gap: 30px; font-size: 20px;
+    }
+    .navlinks.open{ display:flex; }
+    .menu-toggle{ display:block; }
+    .dest-hero { align-items: flex-start; padding-top: 108px; }
+  }
+
+  .back-to-top{
+    position: fixed; bottom: 2em; right: 2em; z-index: 9999;
+    width: 44px; height: 44px; border-radius: 50%;
+    background: var(--ink); color: var(--gold-soft);
+    display:flex; align-items:center; justify-content:center;
+    font-size: 1.3rem; line-height:1; text-decoration:none!important;
+    box-shadow: 0 4px 14px rgba(13,43,41,.25);
+    opacity:0; visibility:hidden; transform: translateY(8px); pointer-events:none;
+    transition: opacity .25s ease, transform .25s ease, visibility .25s;
+  }
+  .back-to-top.is-visible{ opacity:1; visibility:visible; transform:translateY(0); pointer-events:auto; }
+  .back-to-top:hover{ background: var(--emerald-deep); }
+  @media (max-width:600px){
+    .back-to-top{ bottom:1.2em; right:1.2em; width:40px; height:40px; font-size:1.1rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <div class="brand">Travel <em>Gemz</em></div>
+    <button class="menu-toggle" aria-label="Toggle menu" onclick="const o=document.querySelector('.navlinks').classList.toggle('open');this.textContent=o?'✕':'☰';">☰</button>
+    <div class="navlinks">
+      <a href="index.html#destinations">Destinations</a>
+      <a href="journal.html">Journal</a>
+      <a href="index.html#why">Why us</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<section class="dest-hero">
+  <div class="wrap">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a><span class="sep">/</span><a href="journal.html">Journal</a><span class="sep">/</span>Japan
+    </div>
+    <div class="kicker">Japan</div>
+    <h1>A three-day loop through Kyoto without the crowds</h1>
+  </div>
+  <div class="facet-cut"></div>
+</section>
+
+<section class="article-meta">
+  <div class="wrap">
+    <span>7 min read</span>
+    <span>Itineraries</span>
+    <span>Kyoto, Japan</span>
+  </div>
+</section>
+
+<section class="prose">
+  <div class="wrap">
+
+    <section>
+      <p>Kyoto's problem isn't the sights — it's the hours. Fushimi Inari, Arashiyama, Kiyomizu-dera: every one of them is worth the trip, and every one of them is unrecognizable by ten in the morning, buried under tour groups working through the same checklist at the same pace. The fix isn't skipping them. It's showing up before the buses do.</p>
+    </section>
+
+    <section>
+      <h2>Day one: the shrine and the river</h2>
+      <p>Start at Fushimi Inari before seven — it never closes and never charges admission, so there's no reason to wait. The thousands of vermilion torii gates climbing the mountain are genuinely quiet for the first hour, and the light through the gates at that hour is better than anything you'll get midday. Climb as far as Yotsutsuji intersection for the view over the city, then head back down before it fills in.</p>
+      <p>Spend the afternoon along the Kamo River, where locals actually spend their downtime — a stretch of grass and low stone steps running through the middle of the city, popular for a reason. In the evening, walk through Gion before dinner; the wooden facades along Hanamikoji-dori look best just after the lanterns come on.</p>
+    </section>
+
+    <section>
+      <h2>Day two: bamboo and the western hills</h2>
+      <p>Arashiyama's bamboo grove is the most photographed few hundred meters in Kyoto, and it earns it — towering stalks blocking out most of the sky, a path that photographs like nowhere else. It's also the single worst place in the city to be at noon. Arrive by 7:30 and you'll likely have long stretches of the path alone.</p>
+      <p>Follow it with Tenryu-ji temple next door, whose garden opens early and rarely gets the same crush as the bamboo grove just past its gate. By late morning, the day-trippers arrive by the busload; that's your cue to head back toward the city center for lunch and a slower afternoon.</p>
+    </section>
+
+    <section>
+      <h2>Day three: temples on your own schedule</h2>
+      <p>Save Kiyomizu-dera for your last morning, again before eight — the wooden stage jutting out over the hillside is worth seeing without three hundred people trying to get the same photo. Wander down through the preserved streets of Higashiyama afterward, when shops are just opening and the crowds haven't caught up yet.</p>
+      <p>Use the rest of the day loosely: a quiet temple garden that isn't on anyone's top-ten list, a coffee shop down a side street, whatever's left of your energy. Kyoto rewards unstructured time as much as it rewards an early alarm — the two together are what make a short trip feel unhurried.</p>
+    </section>
+
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap">
+    <h2>Planning a trip to Japan?</h2>
+    <a href="destination-japan.html" class="btn-gold">See the full guide</a>
+    <a href="journal.html" class="link-quiet">More from the journal</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="brand">Travel <em>Gemz</em></div>
+      <p class="tagline">Fourteen places worth chasing, and the guides to go with them.</p>
+    </div>
+    <div class="flinks">
+      <a href="index.html#destinations">Destinations</a>
+      <a href="journal.html">Journal</a>
+      <a href="index.html#why">Why us</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+  <div class="wrap fbottom">
+    &copy; 2026 Travel Gemz. All rights reserved. &middot; <a href="credits.html" style="color:inherit;">Photo credits</a>
+  </div>
+</footer>
+
+<a href="#" class="back-to-top" id="back-to-top" aria-label="Back to top">&uarr;</a>
+<script>
+(function() {
+  var btn = document.getElementById('back-to-top');
+  if (!btn) return;
+  function toggle() {
+    if (window.scrollY > 600) { btn.classList.add('is-visible'); }
+    else { btn.classList.remove('is-visible'); }
+  }
+  window.addEventListener('scroll', toggle, { passive: true });
+  toggle();
+  btn.addEventListener('click', function(e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+})();
+</script>
+</body>
+</html>
