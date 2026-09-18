@@ -1,0 +1,226 @@
+[
+  {
+    "file": "index.html",
+    "slug": "home",
+    "title": "Travel Gemz — Rare places, well chosen",
+    "description": "Travel Gemz covers fifteen handpicked destinations, not four hundred — real guides to where to stay, eat, and go once you land, from Jamaica to Japan.",
+    "ogImage": "",
+    "schemaType": "WebSite"
+  },
+  {
+    "file": "about.html",
+    "slug": "about",
+    "title": "About — Travel Gemz",
+    "description": "Why Travel Gemz only covers fifteen destinations, not four hundred, and how each guide gets written.",
+    "ogImage": "",
+    "schemaType": "AboutPage"
+  },
+  {
+    "file": "contact.html",
+    "slug": "contact",
+    "title": "Contact — Travel Gemz",
+    "description": "Get in touch with Travel Gemz — questions about a destination, a partnership inquiry, or a place you think we should cover next.",
+    "ogImage": "",
+    "schemaType": "ContactPage"
+  },
+  {
+    "file": "credits.html",
+    "slug": "credits",
+    "title": "Photo Credits — Travel Gemz",
+    "description": "Photo credits and licensing for every image used across Travel Gemz, sourced from Wikimedia Commons.",
+    "ogImage": "",
+    "schemaType": "WebPage"
+  },
+  {
+    "file": "journal.html",
+    "slug": "journal",
+    "title": "Journal — Travel Gemz",
+    "description": "Real detail on where to eat, what to skip, and how to time it — the Travel Gemz journal, one destination at a time.",
+    "ogImage": "",
+    "schemaType": "CollectionPage"
+  },
+  {
+    "file": "europe.html",
+    "slug": "europe",
+    "title": "Europe — Travel Gemz",
+    "description": "Travel Gemz guides to Europe — old stone and longer dinners, from lemon groves above the Amalfi cliffs to Santorini's caldera sunsets.",
+    "ogImage": "",
+    "schemaType": "CollectionPage"
+  },
+  {
+    "file": "caribbean-latin-america.html",
+    "slug": "caribbean-latin-america",
+    "title": "Caribbean & Latin America — Travel Gemz",
+    "description": "Travel Gemz guides to the Caribbean and Latin America — warm water and slower clocks, from Jamaica's cliffs to Tulum's cenotes.",
+    "ogImage": "",
+    "schemaType": "CollectionPage"
+  },
+  {
+    "file": "asia-pacific.html",
+    "slug": "asia-pacific",
+    "title": "Asia & the Pacific — Travel Gemz",
+    "description": "Travel Gemz guides to Asia and the Pacific — Palawan's lagoons, Bali's rice terraces, Bora Bora's overwater bungalows, Japan, and Australia.",
+    "ogImage": "",
+    "schemaType": "CollectionPage"
+  },
+  {
+    "file": "north-america.html",
+    "slug": "north-america",
+    "title": "North America — Travel Gemz",
+    "description": "Travel Gemz guides to North America — Banff's glacier lakes, Quebec City's old-world streets, Big Sur's coast highway, and Sedona's red rock canyons.",
+    "ogImage": "",
+    "schemaType": "CollectionPage"
+  },
+  {
+    "file": "destination-jamaica.html",
+    "slug": "destination-jamaica",
+    "title": "Jamaica — Travel Gemz",
+    "description": "A Travel Gemz guide to Jamaica — cliffside sunsets in Negril, jerk smoke drifting over Ocho Rios, and a coastline that rewards slowing down.",
+    "ogImage": "https://travel.gemzonline.com/wp-content/uploads/2026/09/jamaica-hero.jpg",
+    "schemaType": "TouristDestination"
+  },
+  {
+    "file": "destination-turks-caicos.html",
+    "slug": "destination-turks-caicos",
+    "title": "Turks & Caicos — Travel Gemz",
+    "description": "A Travel Gemz guide to Turks and Caicos — the quietest, bluest sand in the Caribbean, and a low-key alternative to the bigger island crowds.",
+    "ogImage": "https://travel.gemzonline.com/wp-content/uploads/2026/09/turks-caicos-hero.jpg",
+    "schemaType": "TouristDestination"
+  },
+  {
+    "file": "destination-tulum.html",
+    "slug": "destination-tulum",
+    "title": "Tulum — Travel Gemz",
+    "description": "A Travel Gemz guide to Tulum — jungle ruins, limestone cenotes, and a coastline that's stayed boutique while the rest of the coast built up.",
+    "ogImage": "https://travel.gemzonline.com/wp-content/uploads/2026/09/tulum-hero.jpg",
+    "schemaType": "TouristDestination"
+  },
+  {
+    "file": "destination-amalfi-coast.html",
+    "slug": "destination-amalfi-coast",
+    "title": "Amalfi Coast — Travel Gemz",
+    "description": "A Travel Gemz guide to the Amalfi Coast — lemon groves stacked above cliffs that drop straight into the sea, and towns built into the rock face itself.",
+    "ogImage": "https://travel.gemzonline.com/wp-content/uploads/2026/09/amalfi-coast-hero.jpg",
+    "schemaType": "TouristDestination"
+  },
+  {
+    "file": "destination-santorini.html",
+    "slug": "destination-santorini",
+    "title": "Santorini — Travel Gemz",
+    "description": "A Travel Gemz guide to Santorini — whitewashed villages built for exactly one kind of sunset, perched on a caldera rim that used to be a volcano.",
+    "ogImage": "https://travel.gemzonline.com/wp-content/uploads/2026/09/santorini-hero.jpg",
+    "schemaType": "TouristDestination"
+  },
+  {
+    "file": "destination-palawan.html",
+    "slug": "destination-palawan",
+    "title": "Palawan — Travel Gemz",
+    "description": "A Travel Gemz guide to Palawan, Philippines — El Nido's lagoons, the Puerto Princesa underground river, and where to base yourself for island hopping without the tour-boat crowds.",
+    "ogImage": "https://travel.gemzonline.com/wp-content/uploads/2026/09/palawan-hero.jpg",
+    "schemaType": "TouristDestination"
+  },
+  {
+    "file": "destination-bali.html",
+    "slug": "destination-bali",
+    "title": "Bali — Travel Gemz",
+    "description": "A Travel Gemz guide to Bali, Indonesia — Ubud's rice terraces, Uluwatu's cliff temples, and how to split your week between the highlands and the coast.",
+    "ogImage": "https://travel.gemzonline.com/wp-content/uploads/2026/09/bali-hero-scaled.jpg",
+    "schemaType": "TouristDestination"
+  },
+  {
+    "file": "destination-bora-bora.html",
+    "slug": "destination-bora-bora",
+    "title": "Bora Bora — Travel Gemz",
+    "description": "A Travel Gemz guide to Bora Bora, French Polynesia — overwater bungalows, lagoon snorkeling, and how to plan the trip everyone else is saving for a honeymoon.",
+    "ogImage": "https://travel.gemzonline.com/wp-content/uploads/2026/09/bora-bora-hero.jpg",
+    "schemaType": "TouristDestination"
+  },
+  {
+    "file": "destination-japan.html",
+    "slug": "destination-japan",
+    "title": "Japan — Travel Gemz",
+    "description": "A Travel Gemz guide to Japan — Kyoto's back alleys, Tokyo's neon, and the trains that connect them, with a route that skips the worst of the crowds.",
+    "ogImage": "https://travel.gemzonline.com/wp-content/uploads/2026/09/japan-hero.jpg",
+    "schemaType": "TouristDestination"
+  },
+  {
+    "file": "destination-australia.html",
+    "slug": "destination-australia",
+    "title": "Australia — Travel Gemz",
+    "description": "A Travel Gemz guide to Australia — reef, outback, and coastline with room to disappear into, and how to string them together without burning the whole trip on flights.",
+    "ogImage": "https://travel.gemzonline.com/wp-content/uploads/2026/09/australia-hero.jpg",
+    "schemaType": "TouristDestination"
+  },
+  {
+    "file": "destination-banff.html",
+    "slug": "destination-banff",
+    "title": "Banff — Travel Gemz",
+    "description": "A Travel Gemz guide to Banff, Alberta — glacier lakes the color of blue topaz, ringed by the Rockies, and how to see them without the midday parking-lot crowds.",
+    "ogImage": "https://travel.gemzonline.com/wp-content/uploads/2026/09/banff-hero.jpg",
+    "schemaType": "TouristDestination"
+  },
+  {
+    "file": "destination-quebec-city.html",
+    "slug": "destination-quebec-city",
+    "title": "Quebec City — Travel Gemz",
+    "description": "A Travel Gemz guide to Quebec City — cobblestone and old-world charm without the transatlantic flight, and how to spend a few days in North America's most European corner.",
+    "ogImage": "https://travel.gemzonline.com/wp-content/uploads/2026/09/quebec-city-hero-scaled.jpg",
+    "schemaType": "TouristDestination"
+  },
+  {
+    "file": "destination-big-sur.html",
+    "slug": "destination-big-sur",
+    "title": "Big Sur — Travel Gemz",
+    "description": "A Travel Gemz guide to Big Sur, California — coast highway switchbacks with a cliffside view the whole way, and where to actually stop along Highway 1.",
+    "ogImage": "https://travel.gemzonline.com/wp-content/uploads/2026/09/big-sur-hero.jpg",
+    "schemaType": "TouristDestination"
+  },
+  {
+    "file": "destination-sedona.html",
+    "slug": "destination-sedona",
+    "title": "Sedona — Travel Gemz",
+    "description": "A Travel Gemz guide to Sedona, Arizona — red rock canyons that turn deep amber at golden hour, and the trails that put you right inside them.",
+    "ogImage": "https://travel.gemzonline.com/wp-content/uploads/2026/09/sedona-hero.jpg",
+    "schemaType": "TouristDestination"
+  },
+  {
+    "file": "destination-phuket.html",
+    "slug": "destination-phuket",
+    "title": "Phuket — Travel Gemz",
+    "description": "A Travel Gemz guide to Phuket, Thailand — limestone bays, Sino-Portuguese old town streets, and how to find the quiet coves past the beach clubs.",
+    "ogImage": "https://travel.gemzonline.com/wp-content/uploads/2026/09/phuket-hero-scaled.jpg",
+    "schemaType": "TouristDestination"
+  },
+  {
+    "file": "journal-jamaica-jerk-chicken.html",
+    "slug": "journal-jamaica-jerk-chicken",
+    "title": "Where to eat jerk chicken like a local in Ocho Rios — Travel Gemz",
+    "description": "Skip the resort buffet — the best jerk chicken in Ocho Rios is at a roadside pit twenty minutes up the coast. Here's how to find it and what to order.",
+    "ogImage": "https://travel.gemzonline.com/wp-content/uploads/2026/09/journal-jamaica.jpg",
+    "schemaType": "Article"
+  },
+  {
+    "file": "journal-amalfi-fishing-villages.html",
+    "slug": "journal-amalfi-fishing-villages",
+    "title": "The quiet fishing villages next door to Amalfi — Travel Gemz",
+    "description": "Everyone stops in Positano. Three towns over, in Cetara, you'll have the harbor almost to yourself — and the best anchovies on the coast.",
+    "ogImage": "https://travel.gemzonline.com/wp-content/uploads/2026/09/journal-amalfi.jpg",
+    "schemaType": "Article"
+  },
+  {
+    "file": "journal-kyoto-loop.html",
+    "slug": "journal-kyoto-loop",
+    "title": "A three-day loop through Kyoto without the crowds — Travel Gemz",
+    "description": "The same temples, the same gardens — just at the hours everyone else skips. A three-day Kyoto itinerary built around timing, not ticking off a list.",
+    "ogImage": "https://travel.gemzonline.com/wp-content/uploads/2026/09/journal-kyoto.jpg",
+    "schemaType": "Article"
+  },
+  {
+    "file": "journal-phuket-night-market.html",
+    "slug": "journal-phuket-night-market",
+    "title": "How to actually do Lard Yai, Phuket's Sunday night market — Travel Gemz",
+    "description": "Bangla Road gets the reputation, but Lard Yai on Thalang Road is where Phuket actually eats on a Sunday night — here's what to order and when to show up.",
+    "ogImage": "https://travel.gemzonline.com/wp-content/uploads/2026/09/journal-phuket-market-scaled.jpg",
+    "schemaType": "Article"
+  }
+]
